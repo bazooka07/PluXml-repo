@@ -3,6 +3,7 @@
 
 	const catalogDiv = document.getElementById('catalogue');
 	const rss = document.querySelector('a.rss');
+	const catalogJSON = document.querySelector('#footer a');
 	const spinner = document.getElementById('spinner');
 	const FIELDS_PATTERN = /#(download|filedate|title|author|version|date|site|description|img)#/g;
 	const defaultImg = {
@@ -35,11 +36,21 @@
 
 	const xhr = new XMLHttpRequest();
 	xhr.onload = function(event) {
+		if(spinner != null) { spinner.classList.remove('active'); }
+
+		if(xhr.status != 200) {
+			catalogDiv.className = '';
+			catalogDiv.innerHTML = '<div class="error">Erreur n°' + xhr.status + ' (<em>' + xhr.statusText +  '</em>)</div>';
+			return;
+		}
+
 		const datas = JSON.parse(xhr.responseText);
 		if('items' in datas && 'page' in datas) {
-			catalogDiv.className = datas.page;
+			catalogDiv.className = datas.page; // Taille des images
+			if(rss != null) { rss.href = 'workdir/rss/' + datas.page + '.xml'; }
+			if(catalogJSON != null) {  catalogJSON.href = 'workdir/latest/' + datas.page + '.json'; }
+
 			const pattern = myTemplate(imgSizes[datas.page]);
-			if(spinner != null) { spinner.classList.remove('active'); }
 
 			if(typeof datas.items == 'object') {
 				catalogDiv.textContent = '';
@@ -66,21 +77,27 @@
 		alert('Quelque chose s\'est mal passée');
 	}
 
-	document.getElementById('menu-ul').onclick = function(event) {
-		if(event.target.tagName == 'LI') {
-			event.preventDefault();
-			const others = document.querySelectorAll('#menu-ul li.active');
-			if(others != null) {
-				for(var i=0, iMax=others.length; i<iMax; i++) {
-					others[i].classList.remove('active');
-				}
+	function displayCatalog(itemsType) {
+		const others = document.querySelectorAll('#menu-ul li.active');
+		if(others != null) {
+			for(var i=0, iMax=others.length; i<iMax; i++) {
+				others[i].classList.remove('active');
 			}
-			event.target.classList.add('active');
-			if(spinner != null) { spinner.classList.add('active'); }
-			if(rss != null) { rss.href = 'workdir/rss/' + event.target.dataset.type + '.xml'; }
-			const url = window.location.href + 'workdir/latest/' + event.target.dataset.type + '.json';
-			xhr.open('GET', url);
-			xhr.send();
+		}
+		const btn = document.querySelector('#menu-ul li[data-type="' + itemsType + '"]');
+		if(btn != null) { btn.classList.add('active'); }
+		if(spinner != null) { spinner.classList.add('active'); }
+		const url = window.location.href + 'workdir/latest/' + itemsType + '.json';
+		xhr.open('GET', url);
+		xhr.send();
+	}
+
+	document.getElementById('menu-ul').onclick = function(event) {
+		if(event.target.tagName == 'LI' && event.target.hasAttribute('data-type')) {
+			event.preventDefault();
+			displayCatalog(event.target.dataset.type);
 		}
 	};
+
+	displayCatalog('plugins');
 })();

@@ -1,12 +1,20 @@
 * {margin:0; padding: 0; box-sizing: border-box;}
-body {font-family: 'Noto Sans',Droid,Arial,Georgia,Sans-Serif; color: #000; background-color: #ebeff2; background-image: url('background.png');
+a[href=""] { display: none; }
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: 'Noto Sans',Droid,Arial,Georgia,Sans-Serif;
+	color: #000; background-color: #ebeff2; background-image: url('background.png');
 }
+#main { flex-grow: 1; }
 header .cell-border {margin-top: 0.7rem;}
 .cell-border.logo {margin-top: 2rem;}
 .logo a {display: block;}
 .logo img {max-width:100%;}
 .nowrap > * { margin: 0 0.3rem; white-space: nowrap;}
-#bandeau {display: grid; grid-template-columns: 60px auto 60px; padding: 0.3rem 0.7rem 0 0; background-color: #ddd; line-height: 1.2; font-size: 82%;}
+#bandeau, #footer {padding: 0.3rem 0.7rem 0 0; background-color: #ddd; line-height: 1.2; font-size: 82%;}
+#bandeau { display: grid; grid-template-columns: 60px auto 60px; }
 #bandeau h2 {grid-column: span 3;}
 #bandeau span {white-space: nowrap;}
 #bandeau > div:first-of-type > div:last-of-type {margin-top: 2.2rem;}
@@ -124,6 +132,12 @@ label:hover, a:hover {color: #FFF; background-color: green;}
 	font-weight: bold;
 	letter-spacing: 0.1rem;
 }
+#footer {
+	text-align: center;
+	line-height: 1.2;
+}
+#footer a { text-decoration: none; }
+/* ======= responsive design =============== */
 
 @media screen and (min-width: 41rem) {
 	#catalogue {display: flex; justify-content: space-around; flex-wrap: wrap;}
@@ -161,3 +175,50 @@ label:hover, a:hover {color: #FFF; background-color: green;}
 	#catalogue.count-4 {justify-content: center;}
 	#catalogue.count-4 article { margin: 0.5rem 1rem;}
 }
+
+/* ------------ css spinner ------------- */
+/* https://github.com/tobiasahlin/SpinKit/blob/master/css/spinners/7-three-bounce.css */
+@-webkit-keyframes three-bounce {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@keyframes three-bounce {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+.spinner.three-bounce {
+	display: none;
+	position: fixed;
+	width: 12rem;
+	top: 50vh;
+	left: calc(50vw - 6rem);
+	margin: 0 auto;
+	text-align: center;
+	transform: translateY(-50%);
+}
+.spinner.three-bounce.active {
+	display: block;
+}
+.spinner.three-bounce > div {
+	width: 3rem;
+	height: 3rem;
+	background-color: #333;
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+	animation: three-bounce 1.4s ease-in-out 0s infinite both;
+}
+.spinner.three-bounce > div:nth-of-type(1) { -webkit-animation-delay: -0.32s; animation-delay: -0.32s; }
+.spinner.three-bounce > div:nth-of-type(2) { -webkit-animation-delay: -0.16s; animation-delay: -0.16s; }
