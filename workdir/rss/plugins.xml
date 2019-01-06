@@ -1,0 +1,102 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Kazimentou, playstore for Pluxml</title>
+		<link>https://bazooka07.github.io/PluXml-repo/index.html</link>
+		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
+		<lastBuildDate>Sun, 06 Jan 2019 15:39:31 +0100</lastBuildDate>
+		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="https://bazooka07.github.io/PluXml-repo/plugins.xml" />
+		<generator>Repository for Pluxml v3.0 (2019-01-06)</generator>
+		<skipDays>
+			<day>Sunday</day>
+		</skipDays>
+		<item>
+			<title>kzURLify</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzUrlify-0_5_0.zip</link>
+			<description>Intégration de la librairie &quot;https://github.com/jbroadway/urlify&quot; pour normaliser les Urls quelque soit les alphabets employés (cyrillic, allemand, polonais, ...).</description>
+			<dc:creator>J.P. Pourrez</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<guid>plugins-2019-01-06-kzUrlify</guid>
+		</item>
+		<item>
+			<title>kzUploader</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzUploader-1_1_3.zip</link>
+			<description>Installe un plugin ou un thème sur le serveur depuis le navigateur Web. Reconnait les archives de mime-type: application/zip et application/gzip (archives zip et tar.gz)</description>
+			<dc:creator>J.P. Pourrez</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzUploader.png" length="5167" type="image/png" />
+			<guid>plugins-2019-01-06-kzUploader</guid>
+		</item>
+		<item>
+			<title>kzU2F</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzU2F-0_8_1.zip</link>
+			<description>Authentification à 2 facteurs, par clé USB, basé sur le protocole U2F</description>
+			<dc:creator>Jean-Pierre Pourrez</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzU2F.png" length="3376" type="image/png" />
+			<guid>plugins-2019-01-06-kzU2F</guid>
+		</item>
+		<item>
+			<title>kzSkinSelect</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzSkinSelect-0_8_1.zip</link>
+			<description>Permet au visiteur de tester le thème de son choix.</description>
+			<dc:creator>J.P. Pourrez</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSkinSelect.png" length="1940" type="image/png" />
+			<guid>plugins-2019-01-06-kzSkinSelect</guid>
+		</item>
+		<item>
+			<title>kzSQLimport</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzSQLimport-0_6_0.zip</link>
+			<description>Import des données depuis un serveur SQL. Cette version est limitée à l'import depuis Spip-2.0. D'autres sources seront ajoutées ultérieurement.</description>
+			<dc:creator>Jean-Pierre Pourrez</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSQLimport.png" length="2898" type="image/png" />
+			<guid>plugins-2019-01-06-kzSQLimport</guid>
+		</item>
+		<item>
+			<title>kzOtPHP</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzOtPHP-0_9_0.zip</link>
+			<description>Double authentification basée sur HOTP et TOTP</description>
+			<dc:creator>J.P. Pourrez</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzOtPHP.png" length="856" type="image/png" />
+			<guid>plugins-2019-01-06-kzOtPHP</guid>
+		</item>
+		<item>
+			<title>kzMailCommentAlert</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzMailCommentAlert-0_8_1.zip</link>
+			<description>Etre alerté par courriel d'un nouveau commentaire pour un article.</description>
+			<dc:creator>Bazooka07</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzMailCommentAlert.png" length="5233" type="image/png" />
+			<guid>plugins-2019-01-06-kzMailCommentAlert</guid>
+		</item>
+		<item>
+			<title>kzLostPassword</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzLostPassword-1_0.zip</link>
+			<description>Plugin pour obtenir un nouveau mot de passe</description>
+			<dc:creator>Jean-Pierre Pierre</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<guid>plugins-2019-01-06-kzLostPassword</guid>
+		</item>
+		<item>
+			<title>kzIpMaxMind</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzIpMaxMind-0_5_0.zip</link>
+			<description>Informations de géolocalisation extraites de la base de données libre GeoLite2, distribuée par le site http://maxmind.com.</description>
+			<dc:creator>J.P. Pourrez</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzIpMaxMind.png" length="1999" type="image/png" />
+			<guid>plugins-2019-01-06-kzIpMaxMind</guid>
+		</item>
+		<item>
+			<title>kzIpInfo</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzIpInfo-1_1_0.zip</link>
+			<description>Interroge le site https://ipinfo.io pour fournir des indications géographiques à partir d'une adresse IP. Utilise principalement du javascript. Donc aucune exigence côté serveur. Gére un cache pour les adresses IP. Tous les drapeaux sont rassemblés dans un sprite.</description>
+			<dc:creator>J.P. Pourrez</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzIpInfo.png" length="1903" type="image/png" />
+			<guid>plugins-2019-01-06-kzIpInfo</guid>
+		</item>
+	</channel>
+</rss>
