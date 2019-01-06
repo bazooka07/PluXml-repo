@@ -77,7 +77,7 @@
 			}
 			event.target.classList.add('active');
 			if(spinner != null) { spinner.classList.add('active'); }
-			if(rss != null) { rss.href = event.target.dataset.type + '-rss.xml'; }
+			if(rss != null) { rss.href = 'workdir/' + event.target.dataset.type + '.xml'; }
 			const url = window.location.href + 'workdir/latest/' + event.target.dataset.type + '.json';
 			xhr.open('GET', url);
 			xhr.send();

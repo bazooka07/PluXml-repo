@@ -211,10 +211,7 @@ function buildCatalog($page) {
 					if(!empty($keyName)) {
 						// on vérifie si le plugin est déjà référencé dans le cache
 						if(!array_key_exists($keyName, $cache)) {
-							$cache[$keyName] = array(
-								'img'		=> $imgPath,
-								'versions'	=> array()
-							);
+							$cache[$keyName] = array('versions'	=> array());
 						}
 						$cache[$keyName]['versions'][$infos['version']] = $infos;
 						if(!empty($imgPath)) {
