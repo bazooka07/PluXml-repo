@@ -245,7 +245,9 @@ function buildCatalog($page) {
 			});
 			$lastVersion = array_keys($cache[$k]['versions'])[0];
 			$lastReleases[$k] = $cache[$k]['versions'][$lastVersion];
-			$lastReleases[$k]['img'] = $cache[$k]['img'];
+			if(!empty($cache[$k]['img'])) {
+				$lastReleases[$k]['img'] = $cache[$k]['img'];
+			}
 		}
 	}
 	// encodage et sauvegarde au format JSON
