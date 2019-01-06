@@ -1,0 +1,163 @@
+* {margin:0; padding: 0; box-sizing: border-box;}
+body {font-family: 'Noto Sans',Droid,Arial,Georgia,Sans-Serif; color: #000; background-color: #ebeff2; background-image: url('background.png');
+}
+header .cell-border {margin-top: 0.7rem;}
+.cell-border.logo {margin-top: 2rem;}
+.logo a {display: block;}
+.logo img {max-width:100%;}
+.nowrap > * { margin: 0 0.3rem; white-space: nowrap;}
+#bandeau {display: grid; grid-template-columns: 60px auto 60px; padding: 0.3rem 0.7rem 0 0; background-color: #ddd; line-height: 1.2; font-size: 82%;}
+#bandeau h2 {grid-column: span 3;}
+#bandeau span {white-space: nowrap;}
+#bandeau > div:first-of-type > div:last-of-type {margin-top: 2.2rem;}
+
+#menu {position: fixed; top: 0; left: 0;}
+#nav-toggle {display: none;}
+#nav-toggle + ul {
+	position: absolute;
+	top: 3rem;
+	width: 7rem;
+	left: -7rem;
+	background-color: #eee;
+	text-align: center;
+	list-style: none;
+	transition: left 0.3s ease;
+}
+#nav-toggle:checked + ul {left: 0;}
+#menu label {
+	font-size: 150%;
+	padding: 0.3rem;
+	background-color: #ddd;
+}
+#menu li { display: block; padding: 0.3rem 0.5rem; text-decoration: none; color: inherit;}
+#menu li.active { background-color: brown; }
+#menu li:hover { color: #fff; cursor: pointer; }
+
+h1, h2, h3, h4, h5 {text-align: center;}
+h3 {margin: 0.5em 0;}
+h3 + p {margin:0; padding:0; text-align: center; font-style: italic;}
+h3 + p a {padding: 0 10px;}
+.txt-center { text-align: center; text-indent: 0;}
+#bandeau a {text-decoration: none;}
+#bandeau div {padding: 0; text-align: center;}
+#bandeau label {cursor: pointer;}
+h1 {margin-top: 0;}
+h1 + p {margin-bottom: 0;}
+label, a {padding: 0 4px;}
+label:hover, a:hover {color: #FFF; background-color: green;}
+#bandeau a img, #detail a img, #detail td:first-of-type span {border: 2px solid transparent;}
+#bandeau a img:hover, #detail a img:hover, #detail td:first-of-type span:hover {border-color: green;}
+.rss:hover {background-color: inherit;}
+
+#catalogue {padding-right: 0.7rem;}
+#catalogue article {
+	display: flex;
+	flex-direction: column;
+	max-width: 23rem;
+	margin: 0.5rem auto;
+	padding: 0;
+	background-color: #fff;
+	border: none;
+	box-shadow: 4px 4px 3px #aaa;
+	border-radius: 0.5rem;
+}
+#catalogue article header {
+	margin: 0;
+	padding: 0;
+	background-color: #556;
+	color: orange;
+	text-align: center;
+	letter-spacing: 0.2rem;
+}
+#catalogue article header a {
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	padding: 0.3rem 0;
+	color: inherit;
+	text-decoration: none;
+}
+#catalogue article header a:hover {
+	color: #fff;
+}
+#catalogue article section {
+	flex-grow: 1;
+}
+#catalogue article footer {
+	margin: 0;
+	background-color: orange;
+	text-align: center;
+}
+#catalogue article p { margin: 0.3rem 0; }
+#catalogue article section span {
+	display: inline-block;
+	width: 4rem;
+	text-align: right;
+	margin-right: 0.5rem;
+	font-style: italic;
+	color: #aaa;
+}
+#catalogue article footer span {
+	white-space: nowrap;
+}
+#catalogue .descr {
+	padding: 0 0.5rem;
+	font-family: "Skolar Regular","Roboto Slab","Droid Serif",Cambria,Georgia,"Times New Roman",Times,serif;
+	font-size: 120%;
+	overflow: auto;
+}
+#catalogue.themes .descr {
+	text-align: center;
+}
+#catalogue .descr > a {
+	text-decoration: none;
+}
+#catalogue.plugins .descr > a {
+	float: left;
+	margin-right: 0.5rem;
+	padding: 0;
+}
+#catalogue .error {
+	padding: 2rem 0;
+	font-size: 200%;
+	color: red;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+}
+
+@media screen and (min-width: 41rem) {
+	#catalogue {display: flex; justify-content: space-around; flex-wrap: wrap;}
+	#catalogue article {width: 48%; margin: 0.5rem 0.3rem;}
+}
+@media screen and (min-width: 46rem) {
+	#bandeau {position: sticky; top:0; padding: 0.3rem 2rem 0; font-size: 100%;}
+	#bandeau h1, #bandeau h2 { padding: 0 1rem; }
+	.logo { margin-top: 0;
+}
+@media screen and (min-width: 63rem) {
+	#bandeau {position: static; padding-bottom: 0.5rem; padding: 0.3rem 2% 0.5rem;}
+	#bandeau > div:first-of-type {padding: 0 1.5%;}
+	#bandeau h1 {margin-top: 1rem; lline-height: 1.6;}
+
+	#menu {position: sticky;}
+	#menu label[for="nav-toggle"] {display: none;}
+	#nav-toggle + ul {position: initial; width: 100%; display: flex; justify-content: center; padding-top: 0.5rem; background-color: transparent;}
+	#menu li {display: block; margin: 0 1rem; padding: 0.2rem 1rem; background-color: #888; color: #fff; border-radius: 0.5rem; letter-spacing: 0.1rem;}
+	#menu li:hover {background-color: green;}
+
+	#catalogue article {width: 31.8%;}
+	#catalogue.count-2 {justify-content: center;}
+	#catalogue.count-2 article { margin: 0.5rem 1rem;}
+
+	.url-help {max-width: 64rem; margin: 0.5rem auto;}
+}
+@media screen and (min-width: 86rem) {
+	#catalogue article {width: 25.5%;}
+	#catalogue.count-3 {justify-content: center;}
+	#catalogue.count-3 article { margin: 0.5rem 1rem;}
+}
+@media screen and (min-width: 96rem) {
+	#catalogue article {width: 19.3%;}
+	#catalogue.count-4 {justify-content: center;}
+	#catalogue.count-4 article { margin: 0.5rem 1rem;}
+}
