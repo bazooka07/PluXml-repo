@@ -1,4 +1,70 @@
 {
+    "captchaImage": {
+        "versions": {
+            "1.20.1": {
+                "download": "plugins/captchaImage-1_20_1.zip",
+                "filedate": "2019-01-06",
+                "title": "Image Captcha",
+                "author": "Jean-Pierre Pourrez",
+                "version": "1.20.1",
+                "date": "17/08/2017",
+                "description": "Image Captcha to protect against malicious bots and others.",
+                "site": "http://www.kazimentou.fr/"
+            },
+            "1.20": {
+                "download": "plugins/captchaImage-1_20.zip",
+                "filedate": "2019-01-06",
+                "title": "Image Captcha",
+                "author": "Jean-Pierre Pourrez",
+                "version": "1.20",
+                "date": "23/05/2017",
+                "description": "Image Captcha to protect against malicious bots and others.",
+                "site": "http://www.kazimentou.fr/"
+            }
+        },
+        "img": "workdir/assets/plugins/captchaImage.png"
+    },
+    "chamPlus": {
+        "versions": {
+            "0.88": {
+                "download": "plugins/chamPlus-0_88.zip",
+                "filedate": "2019-01-06",
+                "title": "ChamPlus",
+                "author": "J.P. Pourrez",
+                "version": "0.88",
+                "date": "01/05/2016",
+                "site": "http://www.kazimentou.fr",
+                "description": "Ajoute des champs personnalisés aux articles et aux pages statiques. Gére les champs médias",
+                "requirements": "Pluxml 5.4, 5.5 - HTML5, PHP >= 5.4",
+                "repository": "http://www.kazimentou.fr/pluxml-plugins2/"
+            },
+            "0.86": {
+                "download": "plugins/chamPlus-0_86.zip",
+                "filedate": "2019-01-06",
+                "title": "ChamPlus",
+                "author": "J.P. Pourrez",
+                "version": "0.86",
+                "date": "03/04/2016",
+                "site": "http://www.kazimentou.fr",
+                "description": "Ajoute des champs personnalisés aux articles et aux pages statiques. Gére les champs médias",
+                "requirements": "Pluxml 5.4, 5.5 - HTML5, PHP >= 5.4",
+                "repository": "http://www.kazimentou.fr/pluxml-plugins2/"
+            },
+            "0.81": {
+                "download": "plugins/chamPlus-0_81.zip",
+                "filedate": "2019-01-06",
+                "title": "ChamPlus",
+                "author": "J.P. Pourrez",
+                "version": "0.81",
+                "date": "14/01/2016",
+                "site": "http://www.kazimentou.fr",
+                "description": "Ajoute des champs personnalisés aux articles et aux pages statiques. Gére les champs médias",
+                "requirements": "Pluxml 5.4, 5.5beta - HTML5, PHP >= 5.4",
+                "repository": "http://www.kazimentou.fr/pluxml-plugins2/"
+            }
+        },
+        "img": "workdir/assets/plugins/chamPlus.png"
+    },
     "codemirror": {
         "versions": {
             "2.1.2": {
@@ -25,6 +91,46 @@
             }
         },
         "img": "workdir/assets/plugins/codemirror.png"
+    },
+    "cssControl": {
+        "versions": {
+            "0.1": {
+                "download": "plugins/cssControl-0_1.zip",
+                "filedate": "2019-01-06",
+                "title": "Cache CSS",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.1",
+                "date": "25/10/2015",
+                "site": "http://www.kazimentou.fr",
+                "repository": "http://www.kazimentou.fr/pluxml-plugins2/",
+                "description": "Contrôle la mise à jour des caches de feuilles CSS pour les plugins. Désactive le cache du navigateur"
+            }
+        }
+    },
+    "csv2table": {
+        "versions": {
+            "1.02": {
+                "download": "plugins/csv2table-1_02.zip",
+                "filedate": "2019-01-06",
+                "title": "Csv2Table",
+                "author": "Jean-Pierre P.",
+                "version": "1.02",
+                "date": "02/04/2014",
+                "site": "",
+                "description": "Dans une page statique, transforme un lien pointant vers un fichier au format csv en un tableau HTML. Le fichier peut être stocké dans le dossier documents ou sur un serveur distant."
+            },
+            "1.01": {
+                "download": "plugins/csv2table-1_01.zip",
+                "filedate": "2019-01-06",
+                "title": "Csv2Table",
+                "author": "Jean-Pierre P.",
+                "version": "1.01",
+                "date": "01/03/2014",
+                "site": "",
+                "description": "Dans une page statique, transforme un lien pointant vers un fichier au format csv en un tableau HTML. Le fichier peut être stocké dans le dossier documents ou sur un serveur distant."
+            }
+        },
+        "img": "workdir/assets/plugins/csv2table.png"
     },
     "kzAce": {
         "versions": {
@@ -580,6 +686,153 @@
             }
         }
     },
+    "lostPassword": {
+        "versions": {
+            "1.0": {
+                "download": "plugins/lostPassword-1_0.zip",
+                "filedate": "2019-01-06",
+                "title": "LostPassword",
+                "author": "Jean-Pierre P.",
+                "version": "1.0",
+                "date": "01/02/2014",
+                "site": "http://jpourrez.free.fr",
+                "description": "Plugin pour obtenir un nouveau mot de passe"
+            }
+        }
+    },
+    "moveMyDatas": {
+        "versions": {
+            "1.0.1": {
+                "download": "plugins/moveMyDatas-1_0_1.zip",
+                "filedate": "2019-01-06",
+                "title": "moveMyDatas",
+                "author": "Jean-Pierre Pourrez",
+                "version": "1.0.1",
+                "date": "16/12/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Gérez les dossiers de vos données",
+                "scope": "admin"
+            },
+            "1.0.0": {
+                "download": "plugins/moveMyDatas-1_0_0.zip",
+                "filedate": "2019-01-06",
+                "title": "moveMyDatas",
+                "author": "Jean-Pierre Pourrez",
+                "version": "1.0.0",
+                "date": "16/12/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Gérez les dossiers de vos données",
+                "usage": "admin"
+            },
+            "0.7": {
+                "download": "plugins/moveMyDatas-0_7.zip",
+                "filedate": "2019-01-06",
+                "title": "moveMyDatas",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.7",
+                "date": "11/03/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Gérez les dossiers de vos données"
+            },
+            "0.6": {
+                "download": "plugins/moveMyDatas-0_6.zip",
+                "filedate": "2019-01-06",
+                "title": "moveMyDatas",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.6",
+                "date": "11/03/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Gérez les dossiers de vos données"
+            },
+            "0.5": {
+                "download": "plugins/moveMyDatas-0_5.zip",
+                "filedate": "2019-01-06",
+                "title": "moveMyDatas",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.5",
+                "date": "16/03/2015",
+                "site": "http://www.kazimentou.fr",
+                "description": "Gérez les dossiers de vos données"
+            }
+        },
+        "img": "workdir/assets/plugins/moveMyDatas.jpg"
+    },
+    "share_me": {
+        "versions": {
+            "1.2.1": {
+                "download": "plugins/share_me-1_2_1.zip",
+                "filedate": "2019-01-06",
+                "title": "Share Me",
+                "author": "Jean-Pierre Pourrez",
+                "version": "1.2.1",
+                "date": "20/03/2018",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour réseaux sociaux utilisant le protocole Opengraph",
+                "scope": "site"
+            },
+            "1.02": {
+                "download": "plugins/share_me-1_02.zip",
+                "filedate": "2019-01-06",
+                "title": "Share Me",
+                "author": "Jean-Pierre Pourrez",
+                "version": "1.02",
+                "date": "08/05/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour réseaux sociaux et Opengraph"
+            },
+            "1.2": {
+                "download": "plugins/share_me-1_2.zip",
+                "filedate": "2019-01-06",
+                "title": "Share Me",
+                "author": "Jean-Pierre Pourrez",
+                "version": "1.2",
+                "date": "19/05/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour réseaux sociaux utilisant le protocole Open Graph"
+            },
+            "1.1": {
+                "download": "plugins/share_me-1_1.zip",
+                "filedate": "2019-01-06",
+                "title": "Share Me",
+                "author": "Jean-Pierre Pourrez",
+                "version": "1.1",
+                "date": "08/05/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour réseaux sociaux utilisant le protocole Opengraph"
+            },
+            "0.67": {
+                "download": "plugins/share_me-0_67.zip",
+                "filedate": "2019-01-06",
+                "title": "Share Me",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.67",
+                "date": "03/04/2016",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour réseaux sociaux et Opengraph"
+            },
+            "0.66": {
+                "download": "plugins/share_me-0_66.zip",
+                "filedate": "2019-01-06",
+                "title": "Share Me",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.66",
+                "date": "21/12/2015",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour réseaux sociaux et Opengraph"
+            },
+            "0.6": {
+                "download": "plugins/share_me-0_6.zip",
+                "filedate": "2019-01-06",
+                "title": "Share Me",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.6",
+                "date": "15/11/2015",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour réseaux sociaux et Opengraph"
+            }
+        },
+        "img": "workdir/assets/plugins/share_me.png"
+    },
     "tinyMCE": {
         "versions": {
             "2.2.1": {
@@ -624,5 +877,43 @@
             }
         },
         "img": "workdir/assets/plugins/tinyMCE.png"
+    },
+    "users_csv": {
+        "versions": {
+            "0.7.2": {
+                "download": "plugins/users_csv-0_7_2.zip",
+                "filedate": "2019-01-06",
+                "title": "Users CSV",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.7.2",
+                "date": "17/04/2018",
+                "site": "http://www.kazimentou.org",
+                "description": "Import des utilisateurs à partir d'un fichier .CSV",
+                "scope": "admin"
+            },
+            "0.7.1": {
+                "download": "plugins/users_csv-0_7_1.zip",
+                "filedate": "2019-01-06",
+                "title": "Users CSV",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.7.1",
+                "date": "17/04/2018",
+                "site": "http://www.kazimentou.org",
+                "description": "Import des utilisateurs à partir d'un fichier .CSV",
+                "scope": "admin"
+            },
+            "0.7.0": {
+                "download": "plugins/users_csv-0_7_0.zip",
+                "filedate": "2019-01-06",
+                "title": "Users CSV",
+                "author": "Jean-Pierre Pourrez",
+                "version": "0.7.0",
+                "date": "17/04/2018",
+                "site": "http://www.kazimentou.org",
+                "description": "Import des utilisateurs à partir d'un fichier .CSV",
+                "scope": "admin"
+            }
+        },
+        "img": "workdir/assets/plugins/users_csv.jpg"
     }
 }
