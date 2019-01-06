@@ -4,12 +4,21 @@
 		<title>Kazimentou, playstore for Pluxml</title>
 		<link>https://bazooka07.github.io/PluXml-repo/index.html</link>
 		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
-		<lastBuildDate>Sun, 06 Jan 2019 17:15:42 +0100</lastBuildDate>
+		<lastBuildDate>Sun, 06 Jan 2019 17:34:28 +0100</lastBuildDate>
 		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="https://bazooka07.github.io/PluXml-repo/plugins.xml" />
 		<generator>Repository for Pluxml v3.0 (2019-01-06)</generator>
 		<skipDays>
 			<day>Sunday</day>
 		</skipDays>
+		<item>
+			<title>TinyMCE</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/tinyMCE-2_2_1.zip</link>
+			<description>Plugin pour TinyMCE - Utilise les gestionnaires de médias et d'articles de PluXML.</description>
+			<dc:creator>Jean-Pierre Pourrez</dc:creator>
+			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/tinyMCE.png" length="2292" type="image/png" />
+			<guid>plugins-2019-01-06-tinyMCE</guid>
+		</item>
 		<item>
 			<title>kzURLify</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzUrlify-0_5_0.zip</link>
@@ -88,15 +97,6 @@
 			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzIpMaxMind.png" length="1999" type="image/png" />
 			<guid>plugins-2019-01-06-kzIpMaxMind</guid>
-		</item>
-		<item>
-			<title>kzIpInfo</title>
-			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzIpInfo-1_1_0.zip</link>
-			<description>Interroge le site https://ipinfo.io pour fournir des indications géographiques à partir d'une adresse IP. Utilise principalement du javascript. Donc aucune exigence côté serveur. Gére un cache pour les adresses IP. Tous les drapeaux sont rassemblés dans un sprite.</description>
-			<dc:creator>J.P. Pourrez</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
-			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzIpInfo.png" length="1903" type="image/png" />
-			<guid>plugins-2019-01-06-kzIpInfo</guid>
 		</item>
 	</channel>
 </rss>

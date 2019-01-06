@@ -2,7 +2,7 @@
     "hostname": "https://bazooka07.github.io",
     "urlBase": "/PluXml-repo/",
     "page": "plugins",
-    "lastUpdate": "2019-01-06T17:15:42+01:00",
+    "lastUpdate": "2019-01-06T17:34:28+01:00",
     "items": {
         "codemirror": {
             "download": "plugins/codemirror-2_1_2.zip",
@@ -229,6 +229,17 @@
             "date": "07/09/2017",
             "site": "http://kazimentou.fr",
             "description": "Intégration de la librairie \"https://github.com/jbroadway/urlify\" pour normaliser les Urls quelque soit les alphabets employés (cyrillic, allemand, polonais, ...)."
+        },
+        "tinyMCE": {
+            "download": "plugins/tinyMCE-2_2_1.zip",
+            "filedate": "2019-01-06",
+            "title": "TinyMCE",
+            "author": "Jean-Pierre Pourrez",
+            "version": "2.2.1",
+            "date": "23/11/2017",
+            "site": "http://www.kazimentou.fr",
+            "description": "Plugin pour TinyMCE - Utilise les gestionnaires de médias et d'articles de PluXML.",
+            "img": "workdir/assets/plugins/tinyMCE.png"
         }
     }
 }

@@ -579,5 +579,50 @@
                 "description": "Intégration de la librairie \"https://github.com/jbroadway/urlify\" pour normaliser les Urls quelque soit les alphabets employés (cyrillic, allemand, polonais, ...)."
             }
         }
+    },
+    "tinyMCE": {
+        "versions": {
+            "2.2.1": {
+                "download": "plugins/tinyMCE-2_2_1.zip",
+                "filedate": "2019-01-06",
+                "title": "TinyMCE",
+                "author": "Jean-Pierre Pourrez",
+                "version": "2.2.1",
+                "date": "23/11/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour TinyMCE - Utilise les gestionnaires de médias et d'articles de PluXML."
+            },
+            "2.1.11": {
+                "download": "plugins/tinyMCE-2_1_11.zip",
+                "filedate": "2019-01-06",
+                "title": "TinyMCE",
+                "author": "Jean-Pierre Pourrez",
+                "version": "2.1.11",
+                "date": "10/11/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour TinyMCE - Utilise les gestionnaires de médias et d'articles de PluXML."
+            },
+            "2.1.10": {
+                "download": "plugins/tinyMCE-2_1_10.zip",
+                "filedate": "2019-01-06",
+                "title": "TinyMCE",
+                "author": "Jean-Pierre Pourrez",
+                "version": "2.1.10",
+                "date": "06/11/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour TinyMCE - Utilise les gestionnaires de médias et d'articles de PluXML."
+            },
+            "2.1": {
+                "download": "plugins/tinyMCE-2_1.zip",
+                "filedate": "2019-01-06",
+                "title": "TinyMCE",
+                "author": "Jean-Pierre Pourrez",
+                "version": "2.1",
+                "date": "10/10/2017",
+                "site": "http://www.kazimentou.fr",
+                "description": "Plugin pour TinyMCE - Utilise les gestionnaires de médias et d'articles de PluXML."
+            }
+        },
+        "img": "workdir/assets/plugins/tinyMCE.png"
     }
 }
