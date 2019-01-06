@@ -1,6 +1,32 @@
 {
+    "codemirror": {
+        "versions": {
+            "2.1.2": {
+                "download": "plugins/codemirror-2_1_2.zip",
+                "filedate": "2019-01-06",
+                "title": "CodeMirror>",
+                "author": "Jean-Pierre Pourrez",
+                "version": "2.1.2",
+                "date": "09/07/2018",
+                "site": "https://kazimentou.fr",
+                "description": "Plugin pour CodeMirror 5.39.0. Editeur de code avec coloration syntaxique, auto-complétion et repli de code (folding).",
+                "scope": "admin"
+            },
+            "2.1.1": {
+                "download": "plugins/codemirror-2_1_1.zip",
+                "filedate": "2019-01-06",
+                "title": "CodeMirror",
+                "author": "Jean-Pierre Pourrez",
+                "version": "2.1.1",
+                "date": "24/06/2018",
+                "site": "https://kazimentou.fr",
+                "description": "Plugin pour CodeMirror 5.39.0. Editeur de code avec coloration syntaxique, auto-complétion et repli de code (folding).",
+                "scope": "admin"
+            }
+        },
+        "img": "workdir/assets/plugins/codemirror.png"
+    },
     "kzAce": {
-        "img": "workdir/assets/plugins/kzAce.png",
         "versions": {
             "1.2.0": {
                 "download": "plugins/kzAce-1_2_0.zip",
@@ -32,10 +58,10 @@
                 "site": "http://kazimentou.fr",
                 "description": "Editeur de code avec coloration syntaxique et complétion de code (Emmet)"
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzAce.png"
     },
     "kzCalendar": {
-        "img": "workdir/assets/plugins/kzCalendar.png",
         "versions": {
             "0.6.0": {
                 "download": "plugins/kzCalendar-0_6_0.zip",
@@ -57,10 +83,10 @@
                 "site": "http://kazimentou.fr",
                 "description": "Calendrier"
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzCalendar.png"
     },
     "kzCaptcha": {
-        "img": "workdir/assets/plugins/kzCaptcha.png",
         "versions": {
             "1.0.0": {
                 "download": "plugins/kzCaptcha-1_0_0.zip",
@@ -72,10 +98,10 @@
                 "site": "http://kazimentou.fr",
                 "description": "Filtre anti-spam basé sur https://github.com/Gregwar/Captcha"
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzCaptcha.png"
     },
     "kzCommentsFilter": {
-        "img": "workdir/assets/plugins/kzCommentsFilter.png",
         "versions": {
             "0.5.0": {
                 "download": "plugins/kzCommentsFilter-0_5_0.zip",
@@ -87,10 +113,10 @@
                 "site": "http://kazimentou.fr",
                 "description": "Filtre les commentaires avant modération et validation, selon l'adresse Ip, le mail ou le site de l'expéditeur"
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzCommentsFilter.png"
     },
     "kzContact": {
-        "img": "workdir/assets/plugins/kzContact.png",
         "versions": {
             "2.1.0": {
                 "download": "plugins/kzContact-2_1_0.zip",
@@ -114,10 +140,10 @@
                 "description": "Ajoute une page de contact",
                 "requirements": ""
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzContact.png"
     },
     "kzDownload": {
-        "img": "workdir/assets/plugins/kzDownload.png",
         "versions": {
             "0.9.0": {
                 "download": "plugins/kzDownload-0_9_0.zip",
@@ -179,10 +205,10 @@
                 "site": "https://kazimentou.fr",
                 "description": "Crypte automatiquement l'url des fichiers à télécharger."
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzDownload.png"
     },
     "kzGallery": {
-        "img": "workdir/assets/plugins/kzGallery.png",
         "versions": {
             "1.0.0": {
                 "download": "plugins/kzGallery-1_0_0.zip",
@@ -234,10 +260,10 @@
                 "site": "https://kazimentou.fr",
                 "description": "Associe à un ou plusieurs dossiers à un article ou une page statique pour créer des galerie photos."
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzGallery.png"
     },
     "kzIp2location": {
-        "img": "workdir/assets/plugins/kzIp2location.jpg",
         "versions": {
             "0.8.0": {
                 "download": "plugins/kzIp2location-0_8_0.zip",
@@ -249,10 +275,10 @@
                 "site": "http://kazimentou.fr",
                 "description": "Extrait des informations de géolocalisation depuis la base de données libre distribuée par le site http://ip2location.com."
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzIp2location.jpg"
     },
     "kzIpApiJS": {
-        "img": "workdir/assets/plugins/kzIpApiJS.png",
         "versions": {
             "1.0.0": {
                 "download": "plugins/kzIpApiJS-1_0_0.zip",
@@ -265,10 +291,10 @@
                 "description": "Utilise le site http://ip-api.com pour obtenir des indications géographiques pour un lot (batch) de plusieurs adresses IP. Les requêtes se font côté navigateur à l'aide de Javascript. Pour géolocaliser les commentaires.",
                 "scope": "admin"
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzIpApiJS.png"
     },
     "kzIpInfo": {
-        "img": "workdir/assets/plugins/kzIpInfo.png",
         "versions": {
             "1.1.0": {
                 "download": "plugins/kzIpInfo-1_1_0.zip",
@@ -300,10 +326,10 @@
                 "site": "http://kazimentou.fr",
                 "description": "Interroge le site http:://ipinfo.io pour fournir des indications géographiques à partir d'une adresse IP."
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzIpInfo.png"
     },
     "kzIpMaxMind": {
-        "img": "workdir/assets/plugins/kzIpMaxMind.png",
         "versions": {
             "0.5.0": {
                 "download": "plugins/kzIpMaxMind-0_5_0.zip",
@@ -315,10 +341,10 @@
                 "site": "http://kazimentou.fr",
                 "description": "Informations de géolocalisation extraites de la base de données libre GeoLite2, distribuée par le site http://maxmind.com."
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzIpMaxMind.png"
     },
     "kzLostPassword": {
-        "img": false,
         "versions": {
             "1.0": {
                 "download": "plugins/kzLostPassword-1_0.zip",
@@ -333,7 +359,6 @@
         }
     },
     "kzMailCommentAlert": {
-        "img": "workdir/assets/plugins/kzMailCommentAlert.png",
         "versions": {
             "0.8.1": {
                 "download": "plugins/kzMailCommentAlert-0_8_1.zip",
@@ -355,10 +380,10 @@
                 "site": "https://kazimentou.fr",
                 "description": "Etre alerté par courriel d'un nouveau commentaire d'un article auquel on a contribué."
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzMailCommentAlert.png"
     },
     "kzOtPHP": {
-        "img": "workdir/assets/plugins/kzOtPHP.png",
         "versions": {
             "0.9.0": {
                 "download": "plugins/kzOtPHP-0_9_0.zip",
@@ -393,10 +418,10 @@
                 "description": "Double authentification basée sur HOTP et TOTP",
                 "scope": "admin"
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzOtPHP.png"
     },
     "kzSQLimport": {
-        "img": "workdir/assets/plugins/kzSQLimport.png",
         "versions": {
             "0.6.0": {
                 "download": "plugins/kzSQLimport-0_6_0.zip",
@@ -419,10 +444,10 @@
                 "site": "http://www.kazimentou.fr",
                 "description": "Import des données depuis un serveur SQL. Cette version est limitée à l'import depuis Spip-2.0. D'autres sources seront ajoutées ultérieurement."
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzSQLimport.png"
     },
     "kzSkinSelect": {
-        "img": "workdir/assets/plugins/kzSkinSelect.png",
         "versions": {
             "0.8.1": {
                 "download": "plugins/kzSkinSelect-0_8_1.zip",
@@ -446,10 +471,10 @@
                 "description": "Permet au visiteur de tester le thème de son choix.",
                 "scope": "site"
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzSkinSelect.png"
     },
     "kzU2F": {
-        "img": "workdir/assets/plugins/kzU2F.png",
         "versions": {
             "0.8.1": {
                 "download": "plugins/kzU2F-0_8_1.zip",
@@ -462,10 +487,10 @@
                 "description": "Authentification à 2 facteurs, par clé USB, basé sur le protocole U2F",
                 "scope": "admin"
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzU2F.png"
     },
     "kzUploader": {
-        "img": "workdir/assets/plugins/kzUploader.png",
         "versions": {
             "1.1.3": {
                 "download": "plugins/kzUploader-1_1_3.zip",
@@ -538,10 +563,10 @@
                 "site": "http://kazimentou.fr",
                 "description": "Installe un plugin ou un thème sur le serveur depuis le navigateur Web."
             }
-        }
+        },
+        "img": "workdir/assets/plugins/kzUploader.png"
     },
     "kzUrlify": {
-        "img": false,
         "versions": {
             "0.5": {
                 "download": "plugins/kzUrlify-0_5_0.zip",

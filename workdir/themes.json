@@ -1,6 +1,5 @@
 {
     "ardechecs": {
-        "img": "workdir/assets/themes/ardechecs.png",
         "versions": {
             "0.1": {
                 "download": "themes/ardechecs-181227.zip",
@@ -12,10 +11,10 @@
                 "site": "https://kazimentou.fr",
                 "description": "Thème basé sur Knacss version 7 (PluXml 5.6)"
             }
-        }
+        },
+        "img": "workdir/assets/themes/ardechecs.png"
     },
     "kazimentou": {
-        "img": false,
         "versions": {
             "": {
                 "download": "themes/kazimentou.zip",

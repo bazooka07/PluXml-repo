@@ -2,7 +2,7 @@
     "hostname": "https://bazooka07.github.io",
     "urlBase": "/PluXml-repo/",
     "page": "themes",
-    "lastUpdate": "2019-01-06T15:39:31+01:00",
+    "lastUpdate": "2019-01-06T17:15:42+01:00",
     "items": {
         "ardechecs": {
             "download": "themes/ardechecs-181227.zip",
@@ -23,8 +23,7 @@
             "version": "",
             "date": "31/01/2017",
             "site": "http://www.pluxml.org",
-            "description": "Thème par défaut de PluXml 5.5",
-            "img": false
+            "description": "Thème par défaut de PluXml 5.5"
         }
     }
 }
