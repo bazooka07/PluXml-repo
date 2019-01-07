@@ -132,6 +132,20 @@
         },
         "img": "workdir/assets/plugins/csv2table.png"
     },
+    "getDatas": {
+        "versions": {
+            "1.0": {
+                "download": "plugins/getDatas-1_0.zip",
+                "filedate": "2019-01-07",
+                "title": "GetDatas",
+                "author": "Jean-Pierre P.",
+                "version": "1.0",
+                "date": "09/02/2014",
+                "site": "http://jpourrez.free.fr",
+                "description": "sauvegarde de votre dossier data"
+            }
+        }
+    },
     "kzAce": {
         "versions": {
             "1.2.0": {

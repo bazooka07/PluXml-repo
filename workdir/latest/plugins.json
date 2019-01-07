@@ -2,7 +2,7 @@
     "hostname": "https://bazooka07.github.io",
     "urlBase": "/PluXml-repo/",
     "page": "plugins",
-    "lastUpdate": "2019-01-07T21:40:13+01:00",
+    "lastUpdate": "2019-01-07T21:47:35+01:00",
     "items": {
         "captchaImage": {
             "download": "plugins/captchaImage-1_20_1.zip",
@@ -61,6 +61,16 @@
             "site": "",
             "description": "Dans une page statique, transforme un lien pointant vers un fichier au format csv en un tableau HTML. Le fichier peut être stocké dans le dossier documents ou sur un serveur distant.",
             "img": "workdir/assets/plugins/csv2table.png"
+        },
+        "getDatas": {
+            "download": "plugins/getDatas-1_0.zip",
+            "filedate": "2019-01-07",
+            "title": "GetDatas",
+            "author": "Jean-Pierre P.",
+            "version": "1.0",
+            "date": "09/02/2014",
+            "site": "http://jpourrez.free.fr",
+            "description": "sauvegarde de votre dossier data"
         },
         "kzAce": {
             "download": "plugins/kzAce-1_2_0.zip",
