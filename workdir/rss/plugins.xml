@@ -4,12 +4,21 @@
 		<title>Kazimentou, playstore for Pluxml</title>
 		<link>https://bazooka07.github.io/PluXml-repo/index.html</link>
 		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
-		<lastBuildDate>Sun, 06 Jan 2019 19:19:41 +0100</lastBuildDate>
+		<lastBuildDate>Mon, 07 Jan 2019 21:40:13 +0100</lastBuildDate>
 		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="https://bazooka07.github.io/PluXml-repo/plugins.xml" />
 		<generator>Repository for Pluxml v3.0 (2019-01-06)</generator>
 		<skipDays>
 			<day>Sunday</day>
 		</skipDays>
+		<item>
+			<title>Csv2Table</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/csv2table-1_02.zip</link>
+			<description>Dans une page statique, transforme un lien pointant vers un fichier au format csv en un tableau HTML. Le fichier peut être stocké dans le dossier documents ou sur un serveur distant.</description>
+			<dc:creator>Jean-Pierre P.</dc:creator>
+			<pubDate>Mon, 07 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/csv2table.png" length="3385" type="image/png" />
+			<guid>plugins-2019-01-07-csv2table</guid>
+		</item>
 		<item>
 			<title>Users CSV</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/users_csv-0_7_2.zip</link>
@@ -88,15 +97,6 @@
 			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSkinSelect.png" length="1940" type="image/png" />
 			<guid>plugins-2019-01-06-kzSkinSelect</guid>
-		</item>
-		<item>
-			<title>kzSQLimport</title>
-			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzSQLimport-0_6_0.zip</link>
-			<description>Import des données depuis un serveur SQL. Cette version est limitée à l'import depuis Spip-2.0. D'autres sources seront ajoutées ultérieurement.</description>
-			<dc:creator>Jean-Pierre Pourrez</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
-			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSQLimport.png" length="2898" type="image/png" />
-			<guid>plugins-2019-01-06-kzSQLimport</guid>
 		</item>
 	</channel>
 </rss>
