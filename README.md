@@ -30,6 +30,7 @@ pour créer les catalogues au format JSON des différentes extensions
 - Vous devez maintenant enregistrer les différentes modifications (*commit*) et les pousser sur votre compte Github (*push*) :
 
 ```
+git add .
 git commit -am 'le message qui vous convient' 
 git push origin gh-pages
 ```
