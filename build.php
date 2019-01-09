@@ -9,6 +9,7 @@ const WORKDIR = 'workdir/';
 const ASSETS = WORKDIR.'assets/';
 const LAST_RELEASES = WORKDIR.'latest/';
 const RSS = WORKDIR.'rss/';
+const REPO_XML = WORKDIR.'xml/';
 
 define('VERSION', date('Y-m-d', filemtime(__FILE__)));
 
@@ -17,6 +18,14 @@ const GIT_PATTERN = '@^\w+\s+(https?)://github.com/([\w-]+)/([^/]+)\.git\b@';
 const JSON_OPTIONS = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT;
 
 const EXT_RSS = '.xml';
+
+const BEGIN_REPO_XML = <<< EOT
+<?xml version="1.0" encoding="UTF-8"?>
+<document>\n
+EOT;
+const END_REPO_XML = <<< EOT
+</document>\n
+EOT;
 
 function getHostnameFromGit() {
 	// origin	https://github.com/bazooka07/pluxml-repository-static.git (fetch)
@@ -76,14 +85,15 @@ function getThemeName(ZipArchive $zipFile) {
 	return preg_replace('@^(\w[^/]*).*@', '$1',$zipFile->getNameIndex(0));
 }
 
-function buildRSS($page, &$cache, $root) {
-	$filename = WORKDIR.$page.'.json';
+function buildRSS(&$datas) {
+	$root = $datas['hostname'].$datas['urlBase'];
+	$filename = WORKDIR.$datas['page'].'.json';
 	$lastBuildDate = date('r', filemtime($filename));
 	$sitename = SITE_TITLE;
 	$href = $root.$page.EXT_RSS;
 	$description = SITE_DESCRIPTION;
 	$ver = VERSION;
-	$output = <<< RSS_STARTS
+	$header = <<< RSS_STARTS
 <?xml version="1.0"  encoding="UTF-8" ?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
@@ -99,13 +109,14 @@ function buildRSS($page, &$cache, $root) {
 RSS_STARTS;
 
 	$temp = array();
-	foreach($cache as $item=>$infos) {
+	foreach($datas['items'] as $item=>$infos) {
 		$lastVersion = array_keys($infos['versions'])[0];
 		$lastRelease = $infos['versions'][$lastVersion];
 		if(!empty($infos['img'])) { $lastRelease['img'] = $infos['img']; }
 		$temp[$lastRelease['filedate'].'-'.$item] = $lastRelease;
 	}
 
+	$output = array();
 	if(!empty($temp)) {
 		krsort($temp);
 		$lastUpdates = array_slice($temp, 0, 10); // 10 items for the RSS feed
@@ -125,7 +136,7 @@ ENCLOSURE;
 			} else
 				$enclosure = '';
 
-			$output .= <<< ITEM
+			$output[] = <<< ITEM
 		<item>
 			<title>$title</title>
 			<link>${root}${infos['download']}</link>
@@ -138,12 +149,36 @@ ITEM;
 		}
 	}
 
-	$output .=  <<< RSS_ENDS
+	$footer =  <<< RSS_ENDS
 	</channel>
 </rss>\n
 RSS_ENDS;
 
-	file_put_contents(RSS.$page.EXT_RSS, $output);
+	file_put_contents(RSS.$page.EXT_RSS, $header.implode("\n", $output).$footer);
+}
+
+function buildXML(&$datas) {
+
+	$root = $datas['hostname'].$datas['urlBase'];
+	$output = array();
+	foreach($datas['items'] as $item=>$infos) {
+		$output[] = <<< PLUGIN
+	<plugin>
+		<title>${infos['title']}</title>
+		<author>${infos['author']}</author>
+		<version>${infos['version']}</version>
+		<date>${infos['date']}</date>
+		<site>${infos['site']}</site>
+		<description><![CDATA[${infos['description']}]]></description>
+		<name>${item}</name>
+		<file>${root}${infos['download']}</file>
+		<icon>${root}${infos['img']}</icon>
+	</plugin>
+PLUGIN;
+	}
+	$filename = WORKDIR.'rss/'.$datas['page'];
+	file_put_contents($filename.'.xml', BEGIN_REPO_XML. implode("\n", $output) .END_REPO_XML)
+	file_put_contents($filename.'-version.xml', date('ymd', filemtime($filename.'.xml')));
 }
 
 function buildCatalog($page) {
@@ -269,7 +304,8 @@ function buildCatalog($page) {
 		$error = "No rights for writing in the $filename file.\nFeel free for calling the webmaster.";
 	}
 
-	buildRSS($page, $cache, $hostname.$urlBase);
+	buildRSS($callbacks);
+	buildXML($callbacks);
 }
 function init() {
 	if(!class_exists('ZipArchive')) {
@@ -286,7 +322,7 @@ function init() {
 		exit;
 	}
 
-	foreach(array(WORKDIR, ASSETS, LAST_RELEASES, RSS) as $folder) {
+	foreach(array(WORKDIR, ASSETS, LAST_RELEASES, RSS, REPO_XML) as $folder) {
 		if(!is_dir($folder)) { mkdir($folder); }
 	}
 	foreach(array('plugins', 'themes', 'scripts') as $items) {
