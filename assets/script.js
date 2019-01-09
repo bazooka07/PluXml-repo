@@ -3,7 +3,9 @@
 
 	const catalogDiv = document.getElementById('catalogue');
 	const rss = document.querySelector('a.rss');
-	const catalogJSON = document.querySelector('#footer a');
+	const catalogJSON = document.querySelector('#repo-json');
+	const catalogXML = document.querySelector('#repo-xml');
+	const catalogVersion = document.querySelector('#repo-version');
 	const spinner = document.getElementById('spinner');
 	const FIELDS_PATTERN = /#(download|filedate|title|author|version|date|site|description|img)#/g;
 	const defaultImg = {
@@ -30,7 +32,7 @@
 						<p>#description#</p>
 					</div>
 				</section>
-				<footer>Cliquez sur le titre <span>pour télécharger le plugin</span></footer>
+				<footer>Pour télécharger, cliquez sur le titre <span>ou l'image</span></footer>
 #END# */ return myTemplate.toString().replace(/^.*#BEGIN#/m, '').replace(/#END#.*\n.*$/m, '').replace(/#IMG_SIZE#/g, imgSize).trim() + "\n";
 	}
 
@@ -48,7 +50,19 @@
 		if('items' in datas && 'page' in datas) {
 			catalogDiv.className = datas.page; // Taille des images
 			if(rss != null) { rss.href = 'workdir/rss/' + datas.page + '.xml'; }
-			if(catalogJSON != null) {  catalogJSON.href = 'workdir/latest/' + datas.page + '.json'; }
+			var active = false;
+			if(catalogJSON != null) {  catalogJSON.href = 'workdir/latest/' + datas.page + '.json'; active = true; }
+			if(catalogXML != null) {
+				catalogXML.href = 'workdir/xml/' + datas.page + '.xml';
+				active = true;
+				if(catalogVersion != null) {  catalogVersion.href = 'workdir/xml/' + datas.page + '.version'; }
+			}
+			const el = document.getElementById('footer');
+			if(active) {
+				el.classList.add('active');
+			} else {
+				el.classList.remove('active');
+			}
 
 			const pattern = myTemplate(imgSizes[datas.page]);
 
@@ -87,7 +101,7 @@
 		const btn = document.querySelector('#menu-ul li[data-type="' + itemsType + '"]');
 		if(btn != null) { btn.classList.add('active'); }
 		if(spinner != null) { spinner.classList.add('active'); }
-		const url = window.location.href + 'workdir/latest/' + itemsType + '.json';
+		const url = window.location.href.replace(/[^\/]*$/, '') + 'workdir/latest/' + itemsType + '.json';
 		xhr.open('GET', url);
 		xhr.send();
 	}

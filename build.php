@@ -9,6 +9,7 @@ const WORKDIR = 'workdir/';
 const ASSETS = WORKDIR.'assets/';
 const LAST_RELEASES = WORKDIR.'latest/';
 const RSS = WORKDIR.'rss/';
+const REPO_XML = WORKDIR.'xml/';
 
 define('VERSION', date('Y-m-d', filemtime(__FILE__)));
 
@@ -17,6 +18,20 @@ const GIT_PATTERN = '@^\w+\s+(https?)://github.com/([\w-]+)/([^/]+)\.git\b@';
 const JSON_OPTIONS = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT;
 
 const EXT_RSS = '.xml';
+
+const BEGIN_REPO_XML = <<< EOT
+<?xml version="1.0" encoding="UTF-8"?>
+<document>\n
+EOT;
+const END_REPO_XML = <<< EOT
+\n</document>\n
+EOT;
+
+$DEFAULT_IMGS = array(
+	'plugins'	=> 'default-icon.png',
+	'themes'	=> 'default-theme.png',
+	'scripts'	=> 'default-icon.png'
+);
 
 function getHostnameFromGit() {
 	// origin	https://github.com/bazooka07/pluxml-repository-static.git (fetch)
@@ -83,7 +98,7 @@ function buildRSS($page, &$cache, $root) {
 	$href = $root.$page.EXT_RSS;
 	$description = SITE_DESCRIPTION;
 	$ver = VERSION;
-	$output = <<< RSS_STARTS
+	$header = <<< RSS_STARTS
 <?xml version="1.0"  encoding="UTF-8" ?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
@@ -99,33 +114,36 @@ function buildRSS($page, &$cache, $root) {
 RSS_STARTS;
 
 	$temp = array();
-	foreach($cache as $item=>$infos) {
-		$lastVersion = array_keys($infos['versions'])[0];
-		$lastRelease = $infos['versions'][$lastVersion];
-		if(!empty($infos['img'])) { $lastRelease['img'] = $infos['img']; }
-		$temp[$lastRelease['filedate'].'-'.$item] = $lastRelease;
-	}
+	$output = array();
+	if(is_array($cache)) {
+		foreach($cache as $item=>$infos) {
+			$lastVersion = array_keys($infos['versions'])[0];
+			$lastRelease = $infos['versions'][$lastVersion];
+			if(!empty($infos['img'])) { $lastRelease['img'] = $infos['img']; }
+			$temp[$lastRelease['filedate'].'-'.$item] = $lastRelease;
+		}
 
-	if(!empty($temp)) {
-		krsort($temp);
-		$lastUpdates = array_slice($temp, 0, 10); // 10 items for the RSS feed
-		foreach($lastUpdates as $item=>$infos) {
-			$title = $infos['title'];
-			$pubDate = date('r', strtotime($infos['filedate']));
-			$description = htmlspecialchars($infos['description'], ENT_COMPAT | ENT_XML1);
-			$author = htmlspecialchars($infos['author'], ENT_COMPAT | ENT_XML1);
-			$guid = $page.'-'.$item;
+		if(!empty($temp)) {
+			krsort($temp);
+			$lastUpdates = array_slice($temp, 0, 10); // 10 items for the RSS feed
+			foreach($lastUpdates as $item=>$infos) {
+				$title = $infos['title'];
+				$pubDate = date('r', strtotime($infos['filedate']));
+				$description = htmlspecialchars($infos['description'], ENT_COMPAT | ENT_XML1);
+				$author = htmlspecialchars($infos['author'], ENT_COMPAT | ENT_XML1);
+				$guid = $page.'-'.$item;
 
-			if(!empty($infos['img']) and file_exists($infos['img'])) {
-				$length = filesize($infos['img']);
-				$size = getimagesize($infos['img']);
-				$enclosure = <<< ENCLOSURE
+				if(!empty($infos['img']) and file_exists($infos['img'])) {
+					$length = filesize($infos['img']);
+					$size = getimagesize($infos['img']);
+					$enclosure = <<< ENCLOSURE
 \n			<enclosure url="${root}${infos['img']}" length="$length" type="${size['mime']}" />
 ENCLOSURE;
-			} else
-				$enclosure = '';
+				} else {
+					$enclosure = '';
+				}
 
-			$output .= <<< ITEM
+				$output[] = <<< ITEM
 		<item>
 			<title>$title</title>
 			<link>${root}${infos['download']}</link>
@@ -135,18 +153,47 @@ ENCLOSURE;
 			<guid>$guid</guid>
 		</item>\n
 ITEM;
+			}
 		}
 	}
-
-	$output .=  <<< RSS_ENDS
+	$footer =  <<< RSS_ENDS
 	</channel>
 </rss>\n
 RSS_ENDS;
 
-	file_put_contents(RSS.$page.EXT_RSS, $output);
+	file_put_contents(RSS.$page.EXT_RSS, $header.implode("\n", $output).$footer);
+}
+
+function buildXML(&$datas) {
+
+	$root = $datas['hostname'].$datas['urlBase'];
+	$output = array();
+	if(is_array($datas['items'])) {
+		foreach($datas['items'] as $item=>$infos) {
+			$img = (!empty($infos['img'])) ? $infos['img'] : 'assets/'.$GLOBALS['DEFAULT_IMGS'][$datas['page']];
+			$output[] = <<< PLUGIN
+	<plugin>
+		<title>${infos['title']}</title>
+		<author>${infos['author']}</author>
+		<version>${infos['version']}</version>
+		<date>${infos['date']}</date>
+		<site>${infos['site']}</site>
+		<description><![CDATA[${infos['description']}]]></description>
+		<name>${item}</name>
+		<file>${root}${infos['download']}</file>
+		<icon>${root}${img}</icon>
+	</plugin>
+PLUGIN;
+		}
+	}
+	$filename = REPO_XML.$datas['page'];
+	file_put_contents($filename.'.xml', BEGIN_REPO_XML. implode("\n", $output) .END_REPO_XML);
+	file_put_contents($filename.'.version', date('ymdH', filemtime($filename.'.xml')));
 }
 
 function buildCatalog($page) {
+	echo "Building $page catalog\n";
+
 	$cache = array();
 	$imgsFolder = ASSETS.$page;
 
@@ -270,6 +317,7 @@ function buildCatalog($page) {
 	}
 
 	buildRSS($page, $cache, $hostname.$urlBase);
+	buildXML($callbacks);
 }
 function init() {
 	if(!class_exists('ZipArchive')) {
@@ -286,7 +334,7 @@ function init() {
 		exit;
 	}
 
-	foreach(array(WORKDIR, ASSETS, LAST_RELEASES, RSS) as $folder) {
+	foreach(array(WORKDIR, ASSETS, LAST_RELEASES, RSS, REPO_XML) as $folder) {
 		if(!is_dir($folder)) { mkdir($folder); }
 	}
 	foreach(array('plugins', 'themes', 'scripts') as $items) {
