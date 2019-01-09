@@ -1,5 +1,5 @@
 * {margin:0; padding: 0; box-sizing: border-box;}
-a[href=""] { display: none; }
+/* a[href=""] { display: none; } */
 body {
 	display: flex;
 	flex-direction: column;
@@ -136,6 +136,8 @@ label:hover, a:hover {color: #FFF; background-color: green;}
 	text-align: center;
 	line-height: 1.2;
 }
+#footer > p { display: none; }
+#footer.active > p { display: block; }
 #footer a { text-decoration: none; }
 /* ======= responsive design =============== */
 

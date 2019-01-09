@@ -178,7 +178,7 @@ PLUGIN;
 	}
 	$filename = WORKDIR.'rss/'.$datas['page'];
 	file_put_contents($filename.'.xml', BEGIN_REPO_XML. implode("\n", $output) .END_REPO_XML)
-	file_put_contents($filename.'-version.xml', date('ymd', filemtime($filename.'.xml')));
+	file_put_contents($filename.'.version', date('ymd', filemtime($filename.'.xml')));
 }
 
 function buildCatalog($page) {

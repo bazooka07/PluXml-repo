@@ -3,7 +3,9 @@
 
 	const catalogDiv = document.getElementById('catalogue');
 	const rss = document.querySelector('a.rss');
-	const catalogJSON = document.querySelector('#footer a');
+	const catalogJSON = document.querySelector('#repo-json');
+	const catalogXML = document.querySelector('#repo-xml');
+	const catalogVersion = document.querySelector('#repo-version');
 	const spinner = document.getElementById('spinner');
 	const FIELDS_PATTERN = /#(download|filedate|title|author|version|date|site|description|img)#/g;
 	const defaultImg = {
@@ -48,7 +50,19 @@
 		if('items' in datas && 'page' in datas) {
 			catalogDiv.className = datas.page; // Taille des images
 			if(rss != null) { rss.href = 'workdir/rss/' + datas.page + '.xml'; }
-			if(catalogJSON != null) {  catalogJSON.href = 'workdir/latest/' + datas.page + '.json'; }
+			var active = false;
+			if(catalogJSON != null) {  catalogJSON.href = 'workdir/latest/' + datas.page + '.json'; active = true; }
+			if(catalogXML != null) {
+				catalogXML.href = 'workdir/xml/' + datas.page + '.xml';
+				active = true;
+				if(catalogVersion != null) {  catalogVersion.href = 'workdir/xml/' + datas.page + '.version'; }
+			}
+			const el = document.getElementById('footer');
+			if(active) {
+				el.classList.add('active');
+			} else {
+				el.classList.remove('active');
+			}
 
 			const pattern = myTemplate(imgSizes[datas.page]);
 
