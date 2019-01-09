@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta charset="utf-8" />
@@ -16,26 +16,44 @@
 		</div>
 		<div class="cell-border">
 			<a class="rss" href="" target="_blank"><img width="32" height="32" src="assets/rss.png" alt="Flux RSS" /></a><br />
+			<label for="all-versions">Toutes versions</label>
 		</div>
 		<h2 class="nowrap">Welcome at <span>Kazimentou's repository</span> and get <span>the finest addons</span><span>for PluXml</span></h2>
 	</header>
 	<nav id="menu">
-		<label for="nav-toggle" title="Menu">☰</label>
-		<input id="nav-toggle" type="checkbox" />
+		<input type="checkbox" id="toggle-menu">
+		<label for="toggle-menu">☰</label>
 		<ul id="menu-ul">
-            <li data-type="plugins">Plugins</li>
-			<li data-type="themes">Thèmes</li>
-			<li data-type="scripts">Scripts</li>
+            <li><input type="radio" id="tab1" name="page" value="plugins" /><label for="tab1">Plugins</label></li>
+            <li><input type="radio" id="tab2" name="page" value="themes"  /><label for="tab2">Thèmes</label></li>
+            <li><input type="radio" id="tab3" name="page" value="scripts" /><label for="tab3">Scripts</label></li>
 		</ul>
 	</nav>
 	<section id="main">
+		<input type="checkbox" id="all-versions" />
 		<div id="catalogue">
 			<!-- Fill up by script.js -->
 		</div>
+		<div id="all-versions" class="scrollable-table">
+			<table>
+				<thead>
+					<tr>
+						<th>&nbsp;</th>
+						<th>Nom plugin</th>
+						<th>Version</th>
+						<th>Archive</th>
+						<th>Auteur Site</th>
+						<th>Date</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody id="all-versions-tbody">
+					<!-- Fill up by script.js -->
+				</tbody>
+			</table>
+		</div>
 	</section>
-	<footer id="footer">
-		<p>Télécharger le catalogue au <a id="repo-json" href="" download>format JSON</a> ou au <a id="repo-xml" href="" download>format XML</a> et <a id="repo-version" href="" download>n° version</a>
-	</footer>
+	<footer id="footer"></footer>
 	<div id="spinner" class="spinner three-bounce">
 		<div></div>
 		<div></div>

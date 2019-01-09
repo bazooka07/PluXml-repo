@@ -9,37 +9,45 @@ body {
 }
 #main { flex-grow: 1; }
 header .cell-border {margin-top: 0.7rem;}
-.cell-border.logo {margin-top: 2rem;}
+.cell-border.logo {margin-top: 2.5rem;}
 .logo a {display: block;}
 .logo img {max-width:100%;}
 .nowrap > * { margin: 0 0.3rem; white-space: nowrap;}
 #bandeau, #footer {padding: 0.3rem 0.7rem 0 0; background-color: #ddd; line-height: 1.2; font-size: 82%;}
-#bandeau { display: grid; grid-template-columns: 60px auto 60px; }
+#bandeau { display: grid; grid-template-columns: 60px auto 5rem; }
 #bandeau h2 {grid-column: span 3;}
 #bandeau span {white-space: nowrap;}
 #bandeau > div:first-of-type > div:last-of-type {margin-top: 2.2rem;}
+#bandeau > div:last-of-type label { display: block; }
 
 #menu {position: fixed; top: 0; left: 0;}
-#nav-toggle {display: none;}
-#nav-toggle + ul {
+#toggle-menu { display: none; }
+label[for="toggle-menu"] {
+	display: block;
+	width: 2rem;
+	font-size: 150%;
+	padding: 0.3rem;
+	background-color: #ddd;
+	text-decoration: none;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+#menu-ul {
 	position: absolute;
 	top: 3rem;
-	width: 7rem;
 	left: -7rem;
+	width: 7rem;
 	background-color: #eee;
 	text-align: center;
 	list-style: none;
 	transition: left 0.3s ease;
 }
-#nav-toggle:checked + ul {left: 0;}
-#menu label {
-	font-size: 150%;
-	padding: 0.3rem;
-	background-color: #ddd;
-}
-#menu li { display: block; padding: 0.3rem 0.5rem; text-decoration: none; color: inherit;}
-#menu li.active { background-color: brown; }
-#menu li:hover { color: #fff; cursor: pointer; }
+#toggle-menu:checked + label + #menu-ul { left: 0; }
+#toggle-menu:checked + label { transform: rotate(-90deg); }
+#menu-ul li input[type="radio"] { display: none; }
+#menu-ul li input[type="radio"] + label { display: block; padding: 0.3rem 0.5rem; }
+#menu-ul li input[type="radio"]:checked + label { background-color: brown; color: #fff; }
+#menu-ul li input[type="radio"]:not(:checked) + label:hover { color: #fff; cursor: pointer; }
 
 h1, h2, h3, h4, h5 {text-align: center;}
 h3 {margin: 0.5em 0;}
@@ -125,22 +133,41 @@ label:hover, a:hover {color: #FFF; background-color: green;}
 	margin-right: 0.5rem;
 	padding: 0;
 }
-#catalogue .error {
+.error {
+	width: 100%;
 	padding: 2rem 0;
 	font-size: 200%;
 	color: red;
 	font-weight: bold;
+	text-align: center;
 	letter-spacing: 0.1rem;
 }
-#footer {
-	text-align: center;
-	line-height: 1.2;
-}
-#footer > p { display: none; padding-bottom: 0.2rem; }
-#footer.active > p { display: block; }
+#footer { padding: 0.2rem 0; text-align: center; }
+#footer span { white-space: nowrap; }
 #footer a { text-decoration: none; }
 
+/* -------- multi-versions ----------------- */
+
+#all-versions { display: none; }
+#all-versions + div { display: flex; flex-wrap: wrap; }
+#all-versions + div + div { display: none; }
+#all-versions:checked + div { display: none; }
+#all-versions:checked + div + div { display: block; padding: 0.8rem; overflow: auto; }
+
+#all-versions > table { width: 100%; border-collapse: collapse; --color1: #C2C2A6; }
+#all-versions > table thead { background-color: var(--color1); }
+#all-versions > table thead th { padding: 0.2rem 0.5rem; }
+#all-versions-tbody { background-color: #fff; vertical-align: top; }
+#all-versions-tbody tr:nth-of-type(2n) { background-color: #DAE7E6; }
+#all-versions-tbody tr.latest-version { border-top: 4px ridge var(--color1); }
+#all-versions-tbody td { padding: 0.3rem; }
+#all-versions-tbody td:nth-of-type(3) { text-align: center; }
+#all-versions-tbody td:not(first-of-type) { border-left: 1px solid var(--color1); }
+#all-versions-tbody td:not(.wrap) { white-space: nowrap; }
+#all-versions-tbody th:last-of-type { min-width: 26rem; }
+
 /* ======= responsive design =============== */
+
 
 @media screen and (min-width: 41rem) {
 	#catalogue {display: flex; justify-content: space-around; flex-wrap: wrap;}
@@ -156,11 +183,12 @@ label:hover, a:hover {color: #FFF; background-color: green;}
 	#bandeau > div:first-of-type {padding: 0 1.5%;}
 	#bandeau h1 {margin-top: 1rem; lline-height: 1.6;}
 
-	#menu {position: sticky;}
-	#menu label[for="nav-toggle"] {display: none;}
-	#nav-toggle + ul {position: initial; width: 100%; display: flex; justify-content: center; padding-top: 0.5rem; background-color: transparent;}
-	#menu li {display: block; margin: 0 1rem; padding: 0.2rem 1rem; background-color: #888; color: #fff; border-radius: 0.5rem; letter-spacing: 0.1rem;}
-	#menu li:hover {background-color: green;}
+	#menu > label[for="toggle-menu"] {display: none;}
+	#menu { position: sticky; width: 100%;  background-color: transparent; }
+	#nav-toggle + form { position: initial; width: 100%; background-color: transparent; }
+	#menu-ul { position: static; width:initial; display: flex; justify-content: center; padding-top: 0.5rem; background-color: transparent; }
+	#menu-ul li label {display: block; margin: 0 0.5rem; background-color: #888; color: #fff; border-radius: 0.5rem; letter-spacing: 0.1rem;}
+	#menu-ul li label:hover {background-color: green;}
 
 	#catalogue article {width: 31.8%;}
 	#catalogue.count-2 {justify-content: center;}
