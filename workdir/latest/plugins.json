@@ -2,11 +2,11 @@
     "hostname": "https://bazooka07.github.io",
     "urlBase": "/PluXml-repo/",
     "page": "plugins",
-    "lastUpdate": "2019-01-07T21:47:35+01:00",
+    "lastUpdate": "2019-01-09T14:41:45+01:00",
     "items": {
         "captchaImage": {
             "download": "plugins/captchaImage-1_20_1.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "Image Captcha",
             "author": "Jean-Pierre Pourrez",
             "version": "1.20.1",
@@ -17,7 +17,7 @@
         },
         "chamPlus": {
             "download": "plugins/chamPlus-0_88.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "ChamPlus",
             "author": "J.P. Pourrez",
             "version": "0.88",
@@ -30,7 +30,7 @@
         },
         "codemirror": {
             "download": "plugins/codemirror-2_1_2.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "CodeMirror>",
             "author": "Jean-Pierre Pourrez",
             "version": "2.1.2",
@@ -42,7 +42,7 @@
         },
         "cssControl": {
             "download": "plugins/cssControl-0_1.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "Cache CSS",
             "author": "Jean-Pierre Pourrez",
             "version": "0.1",
@@ -53,7 +53,7 @@
         },
         "csv2table": {
             "download": "plugins/csv2table-1_02.zip",
-            "filedate": "2019-01-07",
+            "filedate": "2019-01-09",
             "title": "Csv2Table",
             "author": "Jean-Pierre P.",
             "version": "1.02",
@@ -64,7 +64,7 @@
         },
         "getDatas": {
             "download": "plugins/getDatas-1_0.zip",
-            "filedate": "2019-01-07",
+            "filedate": "2019-01-09",
             "title": "GetDatas",
             "author": "Jean-Pierre P.",
             "version": "1.0",
@@ -74,7 +74,7 @@
         },
         "kzAce": {
             "download": "plugins/kzAce-1_2_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzAce",
             "author": "J.P. Pourrez",
             "version": "1.2.0",
@@ -85,7 +85,7 @@
         },
         "kzCalendar": {
             "download": "plugins/kzCalendar-0_6_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzCalendar",
             "author": "J.P. Pourrez",
             "version": "0.6.0",
@@ -96,7 +96,7 @@
         },
         "kzCaptcha": {
             "download": "plugins/kzCaptcha-1_0_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzCaptcha",
             "author": "J.P. Pourrez",
             "version": "1.0.0",
@@ -107,7 +107,7 @@
         },
         "kzCommentsFilter": {
             "download": "plugins/kzCommentsFilter-0_5_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzCommentsFilter",
             "author": "J.P. Pourrez",
             "version": "0.5.0",
@@ -118,7 +118,7 @@
         },
         "kzContact": {
             "download": "plugins/kzContact-2_1_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "Formulaire de contact",
             "author": "Bazooka07",
             "version": "2.1.0",
@@ -130,7 +130,7 @@
         },
         "kzDownload": {
             "download": "plugins/kzDownload-0_9_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzDownload",
             "author": "Bazooka07",
             "version": "0.9.0",
@@ -141,7 +141,7 @@
         },
         "kzGallery": {
             "download": "plugins/kzGallery-1_0_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzGallery",
             "author": "Bazooka07",
             "version": "1.0.0",
@@ -152,7 +152,7 @@
         },
         "kzIp2location": {
             "download": "plugins/kzIp2location-0_8_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzIp2location",
             "author": "J.P. Pourrez",
             "version": "0.8.0",
@@ -163,7 +163,7 @@
         },
         "kzIpApiJS": {
             "download": "plugins/kzIpApiJS-1_0_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzIpApiJS",
             "author": "J.P. Pourrez",
             "version": "1.0.0",
@@ -175,7 +175,7 @@
         },
         "kzIpInfo": {
             "download": "plugins/kzIpInfo-1_1_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzIpInfo",
             "author": "J.P. Pourrez",
             "version": "1.1.0",
@@ -186,7 +186,7 @@
         },
         "kzIpMaxMind": {
             "download": "plugins/kzIpMaxMind-0_5_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzIpMaxMind",
             "author": "J.P. Pourrez",
             "version": "0.5.0",
@@ -197,7 +197,7 @@
         },
         "kzLostPassword": {
             "download": "plugins/kzLostPassword-1_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzLostPassword",
             "author": "Jean-Pierre Pierre",
             "version": "1.0",
@@ -207,7 +207,7 @@
         },
         "kzMailCommentAlert": {
             "download": "plugins/kzMailCommentAlert-0_8_1.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzMailCommentAlert",
             "author": "Bazooka07",
             "version": "0.8.1",
@@ -218,7 +218,7 @@
         },
         "kzOtPHP": {
             "download": "plugins/kzOtPHP-0_9_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzOtPHP",
             "author": "J.P. Pourrez",
             "version": "0.9.0",
@@ -230,7 +230,7 @@
         },
         "kzSQLimport": {
             "download": "plugins/kzSQLimport-0_6_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzSQLimport",
             "author": "Jean-Pierre Pourrez",
             "version": "0.6.0",
@@ -242,7 +242,7 @@
         },
         "kzSkinSelect": {
             "download": "plugins/kzSkinSelect-0_8_1.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzSkinSelect",
             "author": "J.P. Pourrez",
             "version": "0.8.1",
@@ -254,7 +254,7 @@
         },
         "kzU2F": {
             "download": "plugins/kzU2F-0_8_1.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzU2F",
             "author": "Jean-Pierre Pourrez",
             "version": "0.8.1",
@@ -266,7 +266,7 @@
         },
         "kzUploader": {
             "download": "plugins/kzUploader-1_1_3.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzUploader",
             "author": "J.P. Pourrez",
             "version": "1.1.3",
@@ -278,7 +278,7 @@
         },
         "kzUrlify": {
             "download": "plugins/kzUrlify-0_5_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "kzURLify",
             "author": "J.P. Pourrez",
             "version": "0.5",
@@ -288,7 +288,7 @@
         },
         "lostPassword": {
             "download": "plugins/lostPassword-1_0.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "LostPassword",
             "author": "Jean-Pierre P.",
             "version": "1.0",
@@ -298,7 +298,7 @@
         },
         "moveMyDatas": {
             "download": "plugins/moveMyDatas-1_0_1.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "moveMyDatas",
             "author": "Jean-Pierre Pourrez",
             "version": "1.0.1",
@@ -310,7 +310,7 @@
         },
         "share_me": {
             "download": "plugins/share_me-1_2_1.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "Share Me",
             "author": "Jean-Pierre Pourrez",
             "version": "1.2.1",
@@ -322,7 +322,7 @@
         },
         "tinyMCE": {
             "download": "plugins/tinyMCE-2_2_1.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "TinyMCE",
             "author": "Jean-Pierre Pourrez",
             "version": "2.2.1",
@@ -333,7 +333,7 @@
         },
         "users_csv": {
             "download": "plugins/users_csv-0_7_2.zip",
-            "filedate": "2019-01-06",
+            "filedate": "2019-01-09",
             "title": "Users CSV",
             "author": "Jean-Pierre Pourrez",
             "version": "0.7.2",

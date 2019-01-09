@@ -4,98 +4,108 @@
 		<title>Kazimentou, playstore for Pluxml</title>
 		<link>https://bazooka07.github.io/PluXml-repo/index.html</link>
 		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
-		<lastBuildDate>Mon, 07 Jan 2019 21:47:35 +0100</lastBuildDate>
+		<lastBuildDate>Wed, 09 Jan 2019 14:41:45 +0100</lastBuildDate>
 		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="https://bazooka07.github.io/PluXml-repo/plugins.xml" />
-		<generator>Repository for Pluxml v3.0 (2019-01-06)</generator>
+		<generator>Repository for Pluxml v3.0 (2019-01-09)</generator>
 		<skipDays>
 			<day>Sunday</day>
 		</skipDays>
-		<item>
-			<title>GetDatas</title>
-			<link>https://bazooka07.github.io/PluXml-repo/plugins/getDatas-1_0.zip</link>
-			<description>sauvegarde de votre dossier data</description>
-			<dc:creator>Jean-Pierre P.</dc:creator>
-			<pubDate>Mon, 07 Jan 2019 00:00:00 +0100</pubDate>
-			<guid>plugins-2019-01-07-getDatas</guid>
-		</item>
-		<item>
-			<title>Csv2Table</title>
-			<link>https://bazooka07.github.io/PluXml-repo/plugins/csv2table-1_02.zip</link>
-			<description>Dans une page statique, transforme un lien pointant vers un fichier au format csv en un tableau HTML. Le fichier peut être stocké dans le dossier documents ou sur un serveur distant.</description>
-			<dc:creator>Jean-Pierre P.</dc:creator>
-			<pubDate>Mon, 07 Jan 2019 00:00:00 +0100</pubDate>
-			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/csv2table.png" length="3385" type="image/png" />
-			<guid>plugins-2019-01-07-csv2table</guid>
-		</item>
 		<item>
 			<title>Users CSV</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/users_csv-0_7_2.zip</link>
 			<description>Import des utilisateurs à partir d'un fichier .CSV</description>
 			<dc:creator>Jean-Pierre Pourrez</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/users_csv.jpg" length="1757" type="image/jpeg" />
-			<guid>plugins-2019-01-06-users_csv</guid>
+			<guid>plugins-2019-01-09-users_csv</guid>
 		</item>
+
 		<item>
 			<title>TinyMCE</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/tinyMCE-2_2_1.zip</link>
 			<description>Plugin pour TinyMCE - Utilise les gestionnaires de médias et d'articles de PluXML.</description>
 			<dc:creator>Jean-Pierre Pourrez</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/tinyMCE.png" length="2292" type="image/png" />
-			<guid>plugins-2019-01-06-tinyMCE</guid>
+			<guid>plugins-2019-01-09-tinyMCE</guid>
 		</item>
+
 		<item>
 			<title>Share Me</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/share_me-1_2_1.zip</link>
 			<description>Plugin pour réseaux sociaux utilisant le protocole Opengraph</description>
 			<dc:creator>Jean-Pierre Pourrez</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/share_me.png" length="5826" type="image/png" />
-			<guid>plugins-2019-01-06-share_me</guid>
+			<guid>plugins-2019-01-09-share_me</guid>
 		</item>
+
 		<item>
 			<title>moveMyDatas</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/moveMyDatas-1_0_1.zip</link>
 			<description>Gérez les dossiers de vos données</description>
 			<dc:creator>Jean-Pierre Pourrez</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/moveMyDatas.jpg" length="1849" type="image/jpeg" />
-			<guid>plugins-2019-01-06-moveMyDatas</guid>
+			<guid>plugins-2019-01-09-moveMyDatas</guid>
 		</item>
+
 		<item>
 			<title>LostPassword</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/lostPassword-1_0.zip</link>
 			<description>Plugin pour obtenir un nouveau mot de passe</description>
 			<dc:creator>Jean-Pierre P.</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
-			<guid>plugins-2019-01-06-lostPassword</guid>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
+			<guid>plugins-2019-01-09-lostPassword</guid>
 		</item>
+
 		<item>
 			<title>kzURLify</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzUrlify-0_5_0.zip</link>
 			<description>Intégration de la librairie &quot;https://github.com/jbroadway/urlify&quot; pour normaliser les Urls quelque soit les alphabets employés (cyrillic, allemand, polonais, ...).</description>
 			<dc:creator>J.P. Pourrez</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
-			<guid>plugins-2019-01-06-kzUrlify</guid>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
+			<guid>plugins-2019-01-09-kzUrlify</guid>
 		</item>
+
 		<item>
 			<title>kzUploader</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzUploader-1_1_3.zip</link>
 			<description>Installe un plugin ou un thème sur le serveur depuis le navigateur Web. Reconnait les archives de mime-type: application/zip et application/gzip (archives zip et tar.gz)</description>
 			<dc:creator>J.P. Pourrez</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzUploader.png" length="5167" type="image/png" />
-			<guid>plugins-2019-01-06-kzUploader</guid>
+			<guid>plugins-2019-01-09-kzUploader</guid>
 		</item>
+
 		<item>
 			<title>kzU2F</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzU2F-0_8_1.zip</link>
 			<description>Authentification à 2 facteurs, par clé USB, basé sur le protocole U2F</description>
 			<dc:creator>Jean-Pierre Pourrez</dc:creator>
-			<pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzU2F.png" length="3376" type="image/png" />
-			<guid>plugins-2019-01-06-kzU2F</guid>
+			<guid>plugins-2019-01-09-kzU2F</guid>
+		</item>
+
+		<item>
+			<title>kzSkinSelect</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzSkinSelect-0_8_1.zip</link>
+			<description>Permet au visiteur de tester le thème de son choix.</description>
+			<dc:creator>J.P. Pourrez</dc:creator>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSkinSelect.png" length="1940" type="image/png" />
+			<guid>plugins-2019-01-09-kzSkinSelect</guid>
+		</item>
+
+		<item>
+			<title>kzSQLimport</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzSQLimport-0_6_0.zip</link>
+			<description>Import des données depuis un serveur SQL. Cette version est limitée à l'import depuis Spip-2.0. D'autres sources seront ajoutées ultérieurement.</description>
+			<dc:creator>Jean-Pierre Pourrez</dc:creator>
+			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSQLimport.png" length="2898" type="image/png" />
+			<guid>plugins-2019-01-09-kzSQLimport</guid>
 		</item>
 	</channel>
 </rss>

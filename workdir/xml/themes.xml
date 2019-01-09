@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<plugin>
+		<title>KnaCSS + PluxZero</title>
+		<author>Bazooka07</author>
+		<version>0.1</version>
+		<date>23/09/2018</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Thème basé sur Knacss version 7 (PluXml 5.6)]]></description>
+		<name>ardechecs</name>
+		<file>https://bazooka07.github.io/PluXml-repo/themes/ardechecs-181227.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/themes/ardechecs.png</icon>
+	</plugin>
+	<plugin>
+		<title>Kazimentou</title>
+		<author>PluXml</author>
+		<version></version>
+		<date>31/01/2017</date>
+		<site>http://www.pluxml.org</site>
+		<description><![CDATA[Thème par défaut de PluXml 5.5]]></description>
+		<name>kazimentou</name>
+		<file>https://bazooka07.github.io/PluXml-repo/themes/kazimentou.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/assets/default-theme.png</icon>
+	</plugin>
+</document>

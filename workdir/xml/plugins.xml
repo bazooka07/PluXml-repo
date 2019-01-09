@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<plugin>
+		<title>Image Captcha</title>
+		<author>Jean-Pierre Pourrez</author>
+		<version>1.20.1</version>
+		<date>17/08/2017</date>
+		<site>http://www.kazimentou.fr/</site>
+		<description><![CDATA[Image Captcha to protect against malicious bots and others.]]></description>
+		<name>captchaImage</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/captchaImage-1_20_1.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/captchaImage.png</icon>
+	</plugin>
+	<plugin>
+		<title>ChamPlus</title>
+		<author>J.P. Pourrez</author>
+		<version>0.88</version>
+		<date>01/05/2016</date>
+		<site>http://www.kazimentou.fr</site>
+		<description><![CDATA[Ajoute des champs personnalisés aux articles et aux pages statiques. Gére les champs médias]]></description>
+		<name>chamPlus</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/chamPlus-0_88.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/chamPlus.png</icon>
+	</plugin>
+	<plugin>
+		<title>CodeMirror></title>
+		<author>Jean-Pierre Pourrez</author>
+		<version>2.1.2</version>
+		<date>09/07/2018</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Plugin pour CodeMirror 5.39.0. Editeur de code avec coloration syntaxique, auto-complétion et repli de code (folding).]]></description>
+		<name>codemirror</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/codemirror-2_1_2.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/codemirror.png</icon>
+	</plugin>
+	<plugin>
+		<title>Cache CSS</title>
+		<author>Jean-Pierre Pourrez</author>
+		<version>0.1</version>
+		<date>25/10/2015</date>
+		<site>http://www.kazimentou.fr</site>
+		<description><![CDATA[Contrôle la mise à jour des caches de feuilles CSS pour les plugins. Désactive le cache du navigateur]]></description>
+		<name>cssControl</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/cssControl-0_1.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/assets/default-icon.png</icon>
+	</plugin>
+	<plugin>
+		<title>Csv2Table</title>
+		<author>Jean-Pierre P.</author>
+		<version>1.02</version>
+		<date>02/04/2014</date>
+		<site></site>
+		<description><![CDATA[Dans une page statique, transforme un lien pointant vers un fichier au format csv en un tableau HTML. Le fichier peut être stocké dans le dossier documents ou sur un serveur distant.]]></description>
+		<name>csv2table</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/csv2table-1_02.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/csv2table.png</icon>
+	</plugin>
+	<plugin>
+		<title>GetDatas</title>
+		<author>Jean-Pierre P.</author>
+		<version>1.0</version>
+		<date>09/02/2014</date>
+		<site>http://jpourrez.free.fr</site>
+		<description><![CDATA[sauvegarde de votre dossier data]]></description>
+		<name>getDatas</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/getDatas-1_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/assets/default-icon.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzAce</title>
+		<author>J.P. Pourrez</author>
+		<version>1.2.0</version>
+		<date>10/10/2017</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Editeur de code avec coloration syntaxique et complétion de code (Emmet)]]></description>
+		<name>kzAce</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzAce-1_2_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzAce.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzCalendar</title>
+		<author>J.P. Pourrez</author>
+		<version>0.6.0</version>
+		<date>30/11/2017</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Calendrier]]></description>
+		<name>kzCalendar</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzCalendar-0_6_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzCalendar.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzCaptcha</title>
+		<author>J.P. Pourrez</author>
+		<version>1.0.0</version>
+		<date>31/01/2018</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Filtre anti-spam basé sur https://github.com/Gregwar/Captcha]]></description>
+		<name>kzCaptcha</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzCaptcha-1_0_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzCaptcha.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzCommentsFilter</title>
+		<author>J.P. Pourrez</author>
+		<version>0.5.0</version>
+		<date>23/12/2017</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Filtre les commentaires avant modération et validation, selon l'adresse Ip, le mail ou le site de l'expéditeur]]></description>
+		<name>kzCommentsFilter</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzCommentsFilter-0_5_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzCommentsFilter.png</icon>
+	</plugin>
+	<plugin>
+		<title>Formulaire de contact</title>
+		<author>Bazooka07</author>
+		<version>2.1.0</version>
+		<date>11/11/2018</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Ajoute une page de contact]]></description>
+		<name>kzContact</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzContact-2_1_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzContact.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzDownload</title>
+		<author>Bazooka07</author>
+		<version>0.9.0</version>
+		<date>01/01/2019</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Crypte automatiquement l'url des fichiers à télécharger. Il suffit juste de définir le dossier où sont stockés les fichiers à télécharger.]]></description>
+		<name>kzDownload</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzDownload-0_9_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzDownload.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzGallery</title>
+		<author>Bazooka07</author>
+		<version>1.0.0</version>
+		<date>13/11/2018</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Associe à un ou plusieurs dossiers à un article ou une page statique pour créer des galerie photos.]]></description>
+		<name>kzGallery</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzGallery-1_0_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzGallery.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzIp2location</title>
+		<author>J.P. Pourrez</author>
+		<version>0.8.0</version>
+		<date>23/12/2017</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Extrait des informations de géolocalisation depuis la base de données libre distribuée par le site http://ip2location.com.]]></description>
+		<name>kzIp2location</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzIp2location-0_8_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzIp2location.jpg</icon>
+	</plugin>
+	<plugin>
+		<title>kzIpApiJS</title>
+		<author>J.P. Pourrez</author>
+		<version>1.0.0</version>
+		<date>10/01/2018</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Utilise le site http://ip-api.com pour obtenir des indications géographiques pour un lot (batch) de plusieurs adresses IP. Les requêtes se font côté navigateur à l'aide de Javascript. Pour géolocaliser les commentaires.]]></description>
+		<name>kzIpApiJS</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzIpApiJS-1_0_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzIpApiJS.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzIpInfo</title>
+		<author>J.P. Pourrez</author>
+		<version>1.1.0</version>
+		<date>23/01/2018</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Interroge le site https://ipinfo.io pour fournir des indications géographiques à partir d'une adresse IP. Utilise principalement du javascript. Donc aucune exigence côté serveur. Gére un cache pour les adresses IP. Tous les drapeaux sont rassemblés dans un sprite.]]></description>
+		<name>kzIpInfo</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzIpInfo-1_1_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzIpInfo.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzIpMaxMind</title>
+		<author>J.P. Pourrez</author>
+		<version>0.5.0</version>
+		<date>23/12/2017</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Informations de géolocalisation extraites de la base de données libre GeoLite2, distribuée par le site http://maxmind.com.]]></description>
+		<name>kzIpMaxMind</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzIpMaxMind-0_5_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzIpMaxMind.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzLostPassword</title>
+		<author>Jean-Pierre Pierre</author>
+		<version>1.0</version>
+		<date>14/03/2018</date>
+		<site>http://jpourrez.free.fr</site>
+		<description><![CDATA[Plugin pour obtenir un nouveau mot de passe]]></description>
+		<name>kzLostPassword</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzLostPassword-1_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/assets/default-icon.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzMailCommentAlert</title>
+		<author>Bazooka07</author>
+		<version>0.8.1</version>
+		<date>26/01/2018</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Etre alerté par courriel d'un nouveau commentaire pour un article.]]></description>
+		<name>kzMailCommentAlert</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzMailCommentAlert-0_8_1.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzMailCommentAlert.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzOtPHP</title>
+		<author>J.P. Pourrez</author>
+		<version>0.9.0</version>
+		<date>14/03/2018</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Double authentification basée sur HOTP et TOTP]]></description>
+		<name>kzOtPHP</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzOtPHP-0_9_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzOtPHP.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzSQLimport</title>
+		<author>Jean-Pierre Pourrez</author>
+		<version>0.6.0</version>
+		<date>03/01/2018</date>
+		<site>http://www.kazimentou.fr</site>
+		<description><![CDATA[Import des données depuis un serveur SQL. Cette version est limitée à l'import depuis Spip-2.0. D'autres sources seront ajoutées ultérieurement.]]></description>
+		<name>kzSQLimport</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzSQLimport-0_6_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSQLimport.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzSkinSelect</title>
+		<author>J.P. Pourrez</author>
+		<version>0.8.1</version>
+		<date>30/12/2018</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Permet au visiteur de tester le thème de son choix.]]></description>
+		<name>kzSkinSelect</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzSkinSelect-0_8_1.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSkinSelect.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzU2F</title>
+		<author>Jean-Pierre Pourrez</author>
+		<version>0.8.1</version>
+		<date>13/08/2018</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Authentification à 2 facteurs, par clé USB, basé sur le protocole U2F]]></description>
+		<name>kzU2F</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzU2F-0_8_1.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzU2F.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzUploader</title>
+		<author>J.P. Pourrez</author>
+		<version>1.1.3</version>
+		<date>19/12/2017</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Installe un plugin ou un thème sur le serveur depuis le navigateur Web. Reconnait les archives de mime-type: application/zip et application/gzip (archives zip et tar.gz)]]></description>
+		<name>kzUploader</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzUploader-1_1_3.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzUploader.png</icon>
+	</plugin>
+	<plugin>
+		<title>kzURLify</title>
+		<author>J.P. Pourrez</author>
+		<version>0.5</version>
+		<date>07/09/2017</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Intégration de la librairie "https://github.com/jbroadway/urlify" pour normaliser les Urls quelque soit les alphabets employés (cyrillic, allemand, polonais, ...).]]></description>
+		<name>kzUrlify</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzUrlify-0_5_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/assets/default-icon.png</icon>
+	</plugin>
+	<plugin>
+		<title>LostPassword</title>
+		<author>Jean-Pierre P.</author>
+		<version>1.0</version>
+		<date>01/02/2014</date>
+		<site>http://jpourrez.free.fr</site>
+		<description><![CDATA[Plugin pour obtenir un nouveau mot de passe]]></description>
+		<name>lostPassword</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/lostPassword-1_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/assets/default-icon.png</icon>
+	</plugin>
+	<plugin>
+		<title>moveMyDatas</title>
+		<author>Jean-Pierre Pourrez</author>
+		<version>1.0.1</version>
+		<date>16/12/2017</date>
+		<site>http://www.kazimentou.fr</site>
+		<description><![CDATA[Gérez les dossiers de vos données]]></description>
+		<name>moveMyDatas</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/moveMyDatas-1_0_1.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/moveMyDatas.jpg</icon>
+	</plugin>
+	<plugin>
+		<title>Share Me</title>
+		<author>Jean-Pierre Pourrez</author>
+		<version>1.2.1</version>
+		<date>20/03/2018</date>
+		<site>http://www.kazimentou.fr</site>
+		<description><![CDATA[Plugin pour réseaux sociaux utilisant le protocole Opengraph]]></description>
+		<name>share_me</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/share_me-1_2_1.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/share_me.png</icon>
+	</plugin>
+	<plugin>
+		<title>TinyMCE</title>
+		<author>Jean-Pierre Pourrez</author>
+		<version>2.2.1</version>
+		<date>23/11/2017</date>
+		<site>http://www.kazimentou.fr</site>
+		<description><![CDATA[Plugin pour TinyMCE - Utilise les gestionnaires de médias et d'articles de PluXML.]]></description>
+		<name>tinyMCE</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/tinyMCE-2_2_1.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/tinyMCE.png</icon>
+	</plugin>
+	<plugin>
+		<title>Users CSV</title>
+		<author>Jean-Pierre Pourrez</author>
+		<version>0.7.2</version>
+		<date>17/04/2018</date>
+		<site>http://www.kazimentou.org</site>
+		<description><![CDATA[Import des utilisateurs à partir d'un fichier .CSV]]></description>
+		<name>users_csv</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/users_csv-0_7_2.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/users_csv.jpg</icon>
+	</plugin>
+</document>
