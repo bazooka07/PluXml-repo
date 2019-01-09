@@ -136,9 +136,10 @@ label:hover, a:hover {color: #FFF; background-color: green;}
 	text-align: center;
 	line-height: 1.2;
 }
-#footer > p { display: none; }
+#footer > p { display: none; padding-bottom: 0.2rem; }
 #footer.active > p { display: block; }
 #footer a { text-decoration: none; }
+
 /* ======= responsive design =============== */
 
 @media screen and (min-width: 41rem) {

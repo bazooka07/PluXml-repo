@@ -24,8 +24,14 @@ const BEGIN_REPO_XML = <<< EOT
 <document>\n
 EOT;
 const END_REPO_XML = <<< EOT
-</document>\n
+\n</document>\n
 EOT;
+
+$DEFAULT_IMGS = array(
+	'plugins'	=> 'default-icon.png',
+	'themes'	=> 'default-theme.png',
+	'scripts'	=> 'default-icon.png'
+);
 
 function getHostnameFromGit() {
 	// origin	https://github.com/bazooka07/pluxml-repository-static.git (fetch)
@@ -85,9 +91,8 @@ function getThemeName(ZipArchive $zipFile) {
 	return preg_replace('@^(\w[^/]*).*@', '$1',$zipFile->getNameIndex(0));
 }
 
-function buildRSS(&$datas) {
-	$root = $datas['hostname'].$datas['urlBase'];
-	$filename = WORKDIR.$datas['page'].'.json';
+function buildRSS($page, &$cache, $root) {
+	$filename = WORKDIR.$page.'.json';
 	$lastBuildDate = date('r', filemtime($filename));
 	$sitename = SITE_TITLE;
 	$href = $root.$page.EXT_RSS;
@@ -109,34 +114,36 @@ function buildRSS(&$datas) {
 RSS_STARTS;
 
 	$temp = array();
-	foreach($datas['items'] as $item=>$infos) {
-		$lastVersion = array_keys($infos['versions'])[0];
-		$lastRelease = $infos['versions'][$lastVersion];
-		if(!empty($infos['img'])) { $lastRelease['img'] = $infos['img']; }
-		$temp[$lastRelease['filedate'].'-'.$item] = $lastRelease;
-	}
-
 	$output = array();
-	if(!empty($temp)) {
-		krsort($temp);
-		$lastUpdates = array_slice($temp, 0, 10); // 10 items for the RSS feed
-		foreach($lastUpdates as $item=>$infos) {
-			$title = $infos['title'];
-			$pubDate = date('r', strtotime($infos['filedate']));
-			$description = htmlspecialchars($infos['description'], ENT_COMPAT | ENT_XML1);
-			$author = htmlspecialchars($infos['author'], ENT_COMPAT | ENT_XML1);
-			$guid = $page.'-'.$item;
+	if(is_array($cache)) {
+		foreach($cache as $item=>$infos) {
+			$lastVersion = array_keys($infos['versions'])[0];
+			$lastRelease = $infos['versions'][$lastVersion];
+			if(!empty($infos['img'])) { $lastRelease['img'] = $infos['img']; }
+			$temp[$lastRelease['filedate'].'-'.$item] = $lastRelease;
+		}
 
-			if(!empty($infos['img']) and file_exists($infos['img'])) {
-				$length = filesize($infos['img']);
-				$size = getimagesize($infos['img']);
-				$enclosure = <<< ENCLOSURE
+		if(!empty($temp)) {
+			krsort($temp);
+			$lastUpdates = array_slice($temp, 0, 10); // 10 items for the RSS feed
+			foreach($lastUpdates as $item=>$infos) {
+				$title = $infos['title'];
+				$pubDate = date('r', strtotime($infos['filedate']));
+				$description = htmlspecialchars($infos['description'], ENT_COMPAT | ENT_XML1);
+				$author = htmlspecialchars($infos['author'], ENT_COMPAT | ENT_XML1);
+				$guid = $page.'-'.$item;
+
+				if(!empty($infos['img']) and file_exists($infos['img'])) {
+					$length = filesize($infos['img']);
+					$size = getimagesize($infos['img']);
+					$enclosure = <<< ENCLOSURE
 \n			<enclosure url="${root}${infos['img']}" length="$length" type="${size['mime']}" />
 ENCLOSURE;
-			} else
-				$enclosure = '';
+				} else {
+					$enclosure = '';
+				}
 
-			$output[] = <<< ITEM
+				$output[] = <<< ITEM
 		<item>
 			<title>$title</title>
 			<link>${root}${infos['download']}</link>
@@ -146,9 +153,9 @@ ENCLOSURE;
 			<guid>$guid</guid>
 		</item>\n
 ITEM;
+			}
 		}
 	}
-
 	$footer =  <<< RSS_ENDS
 	</channel>
 </rss>\n
@@ -161,8 +168,10 @@ function buildXML(&$datas) {
 
 	$root = $datas['hostname'].$datas['urlBase'];
 	$output = array();
-	foreach($datas['items'] as $item=>$infos) {
-		$output[] = <<< PLUGIN
+	if(is_array($datas['items'])) {
+		foreach($datas['items'] as $item=>$infos) {
+			$img = (!empty($infos['img'])) ? $infos['img'] : 'assets/'.$GLOBALS['DEFAULT_IMGS'][$datas['page']];
+			$output[] = <<< PLUGIN
 	<plugin>
 		<title>${infos['title']}</title>
 		<author>${infos['author']}</author>
@@ -172,16 +181,19 @@ function buildXML(&$datas) {
 		<description><![CDATA[${infos['description']}]]></description>
 		<name>${item}</name>
 		<file>${root}${infos['download']}</file>
-		<icon>${root}${infos['img']}</icon>
+		<icon>${root}${img}</icon>
 	</plugin>
 PLUGIN;
+		}
 	}
-	$filename = WORKDIR.'rss/'.$datas['page'];
+	$filename = REPO_XML.$datas['page'];
 	file_put_contents($filename.'.xml', BEGIN_REPO_XML. implode("\n", $output) .END_REPO_XML);
-	file_put_contents($filename.'.version', date('ymd', filemtime($filename.'.xml')));
+	file_put_contents($filename.'.version', date('ymdH', filemtime($filename.'.xml')));
 }
 
 function buildCatalog($page) {
+	echo "Building $page catalog\n";
+
 	$cache = array();
 	$imgsFolder = ASSETS.$page;
 
@@ -304,7 +316,7 @@ function buildCatalog($page) {
 		$error = "No rights for writing in the $filename file.\nFeel free for calling the webmaster.";
 	}
 
-	buildRSS($callbacks);
+	buildRSS($page, $cache, $hostname.$urlBase);
 	buildXML($callbacks);
 }
 function init() {

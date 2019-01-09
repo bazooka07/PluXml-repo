@@ -32,7 +32,7 @@
 						<p>#description#</p>
 					</div>
 				</section>
-				<footer>Cliquez sur le titre <span>pour télécharger le plugin</span></footer>
+				<footer>Pour télécharger, cliquez sur le titre <span>ou l'image</span></footer>
 #END# */ return myTemplate.toString().replace(/^.*#BEGIN#/m, '').replace(/#END#.*\n.*$/m, '').replace(/#IMG_SIZE#/g, imgSize).trim() + "\n";
 	}
 
@@ -101,7 +101,7 @@
 		const btn = document.querySelector('#menu-ul li[data-type="' + itemsType + '"]');
 		if(btn != null) { btn.classList.add('active'); }
 		if(spinner != null) { spinner.classList.add('active'); }
-		const url = window.location.href + 'workdir/latest/' + itemsType + '.json';
+		const url = window.location.href.replace(/[^\/]*$/, '') + 'workdir/latest/' + itemsType + '.json';
 		xhr.open('GET', url);
 		xhr.send();
 	}
