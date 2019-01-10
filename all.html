@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Dépôt d'extensions pour PluXml - Dernières versions</title>
+	<title>Dépôt d'extensions pour PluXml - Toutes versions</title>
 	<link rel="stylesheet" href="assets/style.css" />
 </head><body>
 	<header id="bandeau">
@@ -16,7 +16,7 @@
 		</div>
 		<div class="cell-border">
 			<a class="rss" href="" target="_blank"><img width="32" height="32" src="assets/rss.png" alt="Flux RSS" /></a><br />
-			<a class="toggle" href="all.html">Toutes versions</a>
+			<a class="toggle" href="index.html">Dernières versions</a>
 		</div>
 		<h2 class="nowrap">Welcome at <span>Kazimentou's repository</span> and get <span>the finest addons</span><span>for PluXml</span></h2>
 	</header>
@@ -30,8 +30,23 @@
 		</ul>
 	</nav>
 	<section id="main">
-		<div id="catalogue">
-			<!-- Fill up by script.js -->
+		<div id="all-versions" class="scrollable-table">
+			<table>
+				<thead>
+					<tr>
+						<th>&nbsp;</th>
+						<th>Nom plugin</th>
+						<th>Version</th>
+						<th>Archive</th>
+						<th>Auteur Site</th>
+						<th>Date</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody id="all-versions-tbody">
+					<!-- Fill up by script.js -->
+				</tbody>
+			</table>
 		</div>
 	</section>
 	<footer id="footer"></footer>
