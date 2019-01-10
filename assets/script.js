@@ -7,14 +7,11 @@
 	const allVersionsTbody = document.getElementById('all-versions-tbody');
 	const spinner = document.getElementById('spinner');
 	const FIELDS_PATTERN = /#(download|filedate|title|author|version|date|site|description|img|filename)#/g;
-	const defaultImg = {
-		plugins: 'assets/default-icon.png',
-		themes: 'assets/default-theme.png'
-	};
 	const NO_ITEM = 'Il n\'y a aucun élément';
 	const IMG_SIZES = {
 		plugins: '48',
-		themes: '300'
+		themes: '300',
+		scripts: '48'
 	};
 
 	var imgSize = IMG_SIZES.plugins;
@@ -114,7 +111,7 @@
 						article.innerHTML = pattern.replace(FIELDS_PATTERN, function(value, p1) {
 							if(p1 in datas.items[i]) { return datas.items[i][p1]; }
 							switch(p1) {
-								case 'img' : return defaultImg[datas.page]; break;
+								case 'img' : return 'assets/' + datas.page + '.png'; break;
 								default: return '';
 							}
 						});
@@ -145,7 +142,7 @@
 						if(p1 in infos) { return infos[p1]; }
 						switch(p1) {
 							case 'filename' : return infos['download'].replace(/^.*\//, '');
-							case 'img' : return ('img' in datas[plugin]) ? datas[plugin].img : defaultImg[page]; break;
+							case 'img' : return ('img' in datas[plugin]) ? datas[plugin].img : 'assets/' + page + '.png'; break;
 							default: return '';
 						}
 					});
