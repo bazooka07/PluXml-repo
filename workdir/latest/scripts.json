@@ -2,6 +2,17 @@
     "hostname": "https://bazooka07.github.io",
     "urlBase": "/PluXml-repo/",
     "page": "scripts",
-    "lastUpdate": "2019-01-09T14:41:45+01:00",
-    "items": false
+    "lastUpdate": "2019-01-10T10:31:35+01:00",
+    "items": {
+        "kzInstall": {
+            "download": "scripts/kzInstall2.zip",
+            "filedate": "2019-01-10",
+            "title": "kzInstall2>",
+            "author": "J.P. Pourrez",
+            "version": "2.0.1",
+            "date": "19/12/2018",
+            "site": "http://kazimentou.fr",
+            "description": "Installation rapide de PluXml avec le plugin kzUploasder et le thème Ardechecs. La fonction curl() de PHP doit être disponible sur le serveur. Les archives Zip sont installées directement sur le serveur sans passer par le navigateur."
+        }
+    }
 }

@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
-
+	<plugin>
+		<title>kzInstall2></title>
+		<author>J.P. Pourrez</author>
+		<version>2.0.1</version>
+		<date>19/12/2018</date>
+		<site>http://kazimentou.fr</site>
+		<description><![CDATA[Installation rapide de PluXml avec le plugin kzUploasder et le thème Ardechecs. La fonction curl() de PHP doit être disponible sur le serveur. Les archives Zip sont installées directement sur le serveur sans passer par le navigateur.]]></description>
+		<name>kzInstall</name>
+		<file>https://bazooka07.github.io/PluXml-repo/scripts/kzInstall2.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/assets/default-icon.png</icon>
+	</plugin>
 </document>

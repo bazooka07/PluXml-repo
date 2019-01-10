@@ -4,7 +4,7 @@
 		<title>Kazimentou, playstore for Pluxml</title>
 		<link>https://bazooka07.github.io/PluXml-repo/index.html</link>
 		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
-		<lastBuildDate>Wed, 09 Jan 2019 14:41:45 +0100</lastBuildDate>
+		<lastBuildDate>Thu, 10 Jan 2019 10:31:35 +0100</lastBuildDate>
 		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="https://bazooka07.github.io/PluXml-repo/themes.xml" />
 		<generator>Repository for Pluxml v3.0 (2019-01-09)</generator>
 		<skipDays>
@@ -15,8 +15,8 @@
 			<link>https://bazooka07.github.io/PluXml-repo/themes/kazimentou.zip</link>
 			<description>Thème par défaut de PluXml 5.5</description>
 			<dc:creator>PluXml</dc:creator>
-			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
-			<guid>themes-2019-01-09-kazimentou</guid>
+			<pubDate>Thu, 10 Jan 2019 00:00:00 +0100</pubDate>
+			<guid>themes-2019-01-10-kazimentou</guid>
 		</item>
 
 		<item>
@@ -24,9 +24,9 @@
 			<link>https://bazooka07.github.io/PluXml-repo/themes/ardechecs-181227.zip</link>
 			<description>Thème basé sur Knacss version 7 (PluXml 5.6)</description>
 			<dc:creator>Bazooka07</dc:creator>
-			<pubDate>Wed, 09 Jan 2019 00:00:00 +0100</pubDate>
+			<pubDate>Thu, 10 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/themes/ardechecs.png" length="101248" type="image/png" />
-			<guid>themes-2019-01-09-ardechecs</guid>
+			<guid>themes-2019-01-10-ardechecs</guid>
 		</item>
 	</channel>
 </rss>
