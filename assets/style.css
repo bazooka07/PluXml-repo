@@ -19,6 +19,7 @@ header .cell-border {margin-top: 0.7rem;}
 #bandeau span {white-space: nowrap;}
 #bandeau > div:first-of-type > div:last-of-type {margin-top: 2.2rem;}
 #bandeau > div:last-of-type label { display: block; }
+#bandeau a.toggle { display: block; }
 
 #menu {position: fixed; top: 0; left: 0;}
 #toggle-menu { display: none; }
@@ -147,13 +148,7 @@ label:hover, a:hover {color: #FFF; background-color: green;}
 #footer a { text-decoration: none; }
 
 /* -------- multi-versions ----------------- */
-
-#all-versions { display: none; }
-#all-versions + div { display: flex; flex-wrap: wrap; }
-#all-versions + div + div { display: none; }
-#all-versions:checked + div { display: none; }
-#all-versions:checked + div + div { display: block; padding: 0.8rem; overflow: auto; }
-
+#all-versions { padding: 0.8rem; overflow: auto; }
 #all-versions > table { width: 100%; border-collapse: collapse; --color1: #C2C2A6; }
 #all-versions > table thead { background-color: var(--color1); }
 #all-versions > table thead th { padding: 0.2rem 0.5rem; }

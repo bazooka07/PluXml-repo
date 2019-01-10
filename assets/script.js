@@ -4,7 +4,6 @@
 	const catalogDiv = document.getElementById('catalogue');
 	const rss = document.querySelector('a.rss');
 	const footer = document.getElementById('footer');
-	const allVersionsToggle = document.getElementById('all-versions');
 	const allVersionsTbody = document.getElementById('all-versions-tbody');
 	const spinner = document.getElementById('spinner');
 	const FIELDS_PATTERN = /#(download|filedate|title|author|version|date|site|description|img|filename)#/g;
@@ -18,7 +17,6 @@
 		themes: '300'
 	};
 
-	var allVersions = false;
 	var imgSize = IMG_SIZES.plugins;
 	var page = 'plugins';
 
@@ -66,7 +64,19 @@
 		<span>Télécharger le catalogue au <a href="workdir/latest/#PAGE#.json" download="">format JSON</a></span>
 		<span> ou au <a href="workdir/xml/#PAGE#.xml" download="">format XML</a> et <a href="workdir/xml/#PAGE#.version" download="">n° version</a></span>
 #END# */ return myFooterTemplate.toString().replace(/^.*#BEGIN#/m, '').replace(/#END#.*\n.*$/m, '') + "\n";
+	}
 
+	function errorDisplay(message) {
+		if(catalogDiv != null) {
+			catalogDiv.className = '';
+			catalogDiv.innerHTML = '<div class="error">' + message + '</div>';
+			return;
+		}
+		if(allVersionsTbody != null) {
+			allVersionsTbody.innerHTML = '<tr><td class="error" colspan="7">' + message + '</td></tr>';
+			return;
+		}
+		console.log(message);
 	}
 
 	const xhr = new XMLHttpRequest();
@@ -74,14 +84,13 @@
 		if(spinner != null) { spinner.classList.remove('active'); }
 
 		if(xhr.status != 200) {
-			catalogDiv.className = '';
-			catalogDiv.innerHTML = '<div class="error">Erreur n°' + xhr.status + ' (<em>' + xhr.statusText +  '</em>)</div>';
+			errorDisplay('Erreur n°' + xhr.status + ' (<em>' + xhr.statusText +  '</em>)');
 			return;
 		}
 
 		const datas = JSON.parse(xhr.responseText);
 		if(datas == null) {
-			catalogDiv.textContent = '<div class="error">Mauvais format de catalogue</div>';
+			errorDisplay('Mauvais format de catalogue');
 			return;
 		}
 
@@ -93,29 +102,34 @@
 			footer.innerHTML = (noEmptyItemsList) ? myFooterTemplate().replace(/#PAGE#/g, page) : "<span>&nbsp;</span>\n<span>&nbsp;</span>";
 		}
 
-		if('items' in datas && 'page' in datas) {
-			catalogDiv.className = datas.page; // Taille des images
+		if(catalogDiv != null) {
+			if('items' in datas && 'page' in datas) {
+				catalogDiv.className = datas.page; // Taille des images
 
-			if(typeof datas.items == 'object') {
-				const pattern = myTemplate();
-				catalogDiv.textContent = '';
-				for(var i in datas.items) {
-					const article = document.createElement('ARTICLE');
-					article.innerHTML = pattern.replace(FIELDS_PATTERN, function(value, p1) {
-						if(p1 in datas.items[i]) { return datas.items[i][p1]; }
-						switch(p1) {
-							case 'img' : return defaultImg[datas.page]; break;
-							default: return '';
-						}
-					});
-					catalogDiv.appendChild(article);
+				if(typeof datas.items == 'object') {
+					const pattern = myTemplate();
+					catalogDiv.textContent = '';
+					for(var i in datas.items) {
+						const article = document.createElement('ARTICLE');
+						article.innerHTML = pattern.replace(FIELDS_PATTERN, function(value, p1) {
+							if(p1 in datas.items[i]) { return datas.items[i][p1]; }
+							switch(p1) {
+								case 'img' : return defaultImg[datas.page]; break;
+								default: return '';
+							}
+						});
+						catalogDiv.appendChild(article);
+					}
+				} else {
+					errorDisplay(NO_ITEM);
 				}
-			} else {
-				catalogDiv.innerHTML = '<div class="error">' + NO_ITEM + '</div>';
 			}
-		} else if(allVersions) {
+			return;
+		}
+
+		if(allVersionsTbody != null)  {
 			if(typeof datas.length != 'undefined' && datas.length == 0) {
-				allVersionsTbody.innerHTML = '<tr><td class="error" colspan="7">' + NO_ITEM + '</td></tr>';
+				errorDisplay(NO_ITEM);
 				return;
 			}
 
@@ -153,23 +167,11 @@
 	function displayCatalog(itemsType) {
 		if(spinner != null) { spinner.classList.add('active'); }
 		imgSize = IMG_SIZES[page];
-		const path = (allVersions) ? '' : 'latest/';
+		const path = (allVersionsTbody != null) ? '' : 'latest/';
 		const url = window.location.href.replace(/[^\/]*$/, '') + 'workdir/' + path + itemsType + '.json';
 		// console.log(url);
 		xhr.open('GET', url);
 		xhr.send();
-	}
-
-	if(allVersionsToggle != null) {
-		allVersionsToggle.onchange = function(event) {
-			event.preventDefault();
-			allVersions = event.target.checked;
-			const label = document.body.querySelector('#bandeau label[for="all-versions"]');
-			if(label != null) {
-				label.textContent = (allVersions) ? 'Dernières versions' : 'Toutes versions';
-			}
-			displayCatalog(page);
-		}
 	}
 
 	const tabs = document.querySelectorAll('#menu-ul input[type="radio"]');
