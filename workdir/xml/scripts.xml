@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
 	<plugin>
+		<title>PluXml-medias</title>
+		<author>J.P. Pourrez</author>
+		<version>2019-01-18</version>
+		<date>18/01/2019</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Version améliorée de PluXml-5.7 du gestionnaire de médias avec augmentation significative de la vitesse, drag & drop pour envoyermes médias sur le serveur, diaporama des médias, ...]]></description>
+		<name>PluXml-medias</name>
+		<file>https://bazooka07.github.io/PluXml-repo/scripts/PluXml-medias-190118.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/assets/default-icon.png</icon>
+	</plugin>
+	<plugin>
 		<title>kzInstall2></title>
 		<author>J.P. Pourrez</author>
 		<version>2.0.1</version>

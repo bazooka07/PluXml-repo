@@ -1,4 +1,18 @@
 {
+    "PluXml-medias": {
+        "versions": {
+            "2019-01-18": {
+                "download": "scripts/PluXml-medias-190118.zip",
+                "filedate": "2019-01-18",
+                "title": "PluXml-medias",
+                "author": "J.P. Pourrez",
+                "version": "2019-01-18",
+                "date": "18/01/2019",
+                "site": "https://kazimentou.fr",
+                "description": "Version améliorée de PluXml-5.7 du gestionnaire de médias avec augmentation significative de la vitesse, drag & drop pour envoyermes médias sur le serveur, diaporama des médias, ..."
+            }
+        }
+    },
     "kzInstall": {
         "versions": {
             "2.0.1": {

@@ -2,8 +2,18 @@
     "hostname": "https://bazooka07.github.io",
     "urlBase": "/PluXml-repo/",
     "page": "scripts",
-    "lastUpdate": "2019-01-18T22:38:31+01:00",
+    "lastUpdate": "2019-01-18T22:47:26+01:00",
     "items": {
+        "PluXml-medias": {
+            "download": "scripts/PluXml-medias-190118.zip",
+            "filedate": "2019-01-18",
+            "title": "PluXml-medias",
+            "author": "J.P. Pourrez",
+            "version": "2019-01-18",
+            "date": "18/01/2019",
+            "site": "https://kazimentou.fr",
+            "description": "Version améliorée de PluXml-5.7 du gestionnaire de médias avec augmentation significative de la vitesse, drag & drop pour envoyermes médias sur le serveur, diaporama des médias, ..."
+        },
         "kzInstall": {
             "download": "scripts/kzInstall2.zip",
             "filedate": "2019-01-10",

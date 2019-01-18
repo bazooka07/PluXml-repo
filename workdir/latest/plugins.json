@@ -2,7 +2,7 @@
     "hostname": "https://bazooka07.github.io",
     "urlBase": "/PluXml-repo/",
     "page": "plugins",
-    "lastUpdate": "2019-01-18T22:38:31+01:00",
+    "lastUpdate": "2019-01-18T22:47:26+01:00",
     "items": {
         "captchaImage": {
             "download": "plugins/captchaImage-1_20_1.zip",

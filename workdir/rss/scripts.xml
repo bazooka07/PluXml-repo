@@ -4,12 +4,21 @@
 		<title>Kazimentou, playstore for Pluxml</title>
 		<link>https://bazooka07.github.io/PluXml-repo/index.html</link>
 		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
-		<lastBuildDate>Fri, 18 Jan 2019 22:38:31 +0100</lastBuildDate>
+		<lastBuildDate>Fri, 18 Jan 2019 22:47:26 +0100</lastBuildDate>
 		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="https://bazooka07.github.io/PluXml-repo/scripts.xml" />
 		<generator>Repository for Pluxml v3.0 (2019-01-09)</generator>
 		<skipDays>
 			<day>Sunday</day>
 		</skipDays>
+		<item>
+			<title>PluXml-medias</title>
+			<link>https://bazooka07.github.io/PluXml-repo/scripts/PluXml-medias-190118.zip</link>
+			<description>Version améliorée de PluXml-5.7 du gestionnaire de médias avec augmentation significative de la vitesse, drag &amp; drop pour envoyermes médias sur le serveur, diaporama des médias, ...</description>
+			<dc:creator>J.P. Pourrez</dc:creator>
+			<pubDate>Fri, 18 Jan 2019 00:00:00 +0100</pubDate>
+			<guid>scripts-2019-01-18-PluXml-medias</guid>
+		</item>
+
 		<item>
 			<title>kzInstall2></title>
 			<link>https://bazooka07.github.io/PluXml-repo/scripts/kzInstall2.zip</link>
