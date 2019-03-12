@@ -133,6 +133,17 @@
 		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzDownload.png</icon>
 	</plugin>
 	<plugin>
+		<title>kzDuplicate</title>
+		<author>J.P. Pourrez aka Bazooka07</author>
+		<version>0.8.0</version>
+		<date>08/03/2019</date>
+		<site>https://kazimentou.fr</site>
+		<description><![CDATA[Duplicate l'article ou la page statique courant. Sinon duplique un lot de pages statiques dans la liste.]]></description>
+		<name>kzDuplicate</name>
+		<file>https://bazooka07.github.io/PluXml-repo/plugins/kzDuplicate-0_8_0.zip</file>
+		<icon>https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzDuplicate.png</icon>
+	</plugin>
+	<plugin>
 		<title>kzGallery</title>
 		<author>Bazooka07</author>
 		<version>1.0.0</version>

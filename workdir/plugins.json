@@ -328,6 +328,22 @@
         },
         "img": "workdir/assets/plugins/kzDownload.png"
     },
+    "kzDuplicate": {
+        "versions": {
+            "0.8.0": {
+                "download": "plugins/kzDuplicate-0_8_0.zip",
+                "filedate": "2019-03-12",
+                "title": "kzDuplicate",
+                "author": "J.P. Pourrez aka Bazooka07",
+                "version": "0.8.0",
+                "date": "08/03/2019",
+                "site": "https://kazimentou.fr",
+                "description": "Duplicate l'article ou la page statique courant. Sinon duplique un lot de pages statiques dans la liste.",
+                "scope": "admin"
+            }
+        },
+        "img": "workdir/assets/plugins/kzDuplicate.png"
+    },
     "kzGallery": {
         "versions": {
             "1.0.0": {

@@ -2,7 +2,7 @@
     "hostname": "https://bazooka07.github.io",
     "urlBase": "/PluXml-repo/",
     "page": "plugins",
-    "lastUpdate": "2019-01-18T22:47:26+01:00",
+    "lastUpdate": "2019-03-12T23:52:31+01:00",
     "items": {
         "captchaImage": {
             "download": "plugins/captchaImage-1_20_1.zip",
@@ -138,6 +138,18 @@
             "site": "https://kazimentou.fr",
             "description": "Crypte automatiquement l'url des fichiers à télécharger. Il suffit juste de définir le dossier où sont stockés les fichiers à télécharger.",
             "img": "workdir/assets/plugins/kzDownload.png"
+        },
+        "kzDuplicate": {
+            "download": "plugins/kzDuplicate-0_8_0.zip",
+            "filedate": "2019-03-12",
+            "title": "kzDuplicate",
+            "author": "J.P. Pourrez aka Bazooka07",
+            "version": "0.8.0",
+            "date": "08/03/2019",
+            "site": "https://kazimentou.fr",
+            "description": "Duplicate l'article ou la page statique courant. Sinon duplique un lot de pages statiques dans la liste.",
+            "scope": "admin",
+            "img": "workdir/assets/plugins/kzDuplicate.png"
         },
         "kzGallery": {
             "download": "plugins/kzGallery-1_0_0.zip",

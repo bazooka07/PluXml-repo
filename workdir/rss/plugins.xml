@@ -4,12 +4,22 @@
 		<title>Kazimentou, playstore for Pluxml</title>
 		<link>https://bazooka07.github.io/PluXml-repo/index.html</link>
 		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
-		<lastBuildDate>Fri, 18 Jan 2019 22:47:26 +0100</lastBuildDate>
+		<lastBuildDate>Tue, 12 Mar 2019 23:52:31 +0100</lastBuildDate>
 		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="https://bazooka07.github.io/PluXml-repo/plugins.xml" />
 		<generator>Repository for Pluxml v3.0 (2019-01-09)</generator>
 		<skipDays>
 			<day>Sunday</day>
 		</skipDays>
+		<item>
+			<title>kzDuplicate</title>
+			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzDuplicate-0_8_0.zip</link>
+			<description>Duplicate l'article ou la page statique courant. Sinon duplique un lot de pages statiques dans la liste.</description>
+			<dc:creator>J.P. Pourrez aka Bazooka07</dc:creator>
+			<pubDate>Tue, 12 Mar 2019 00:00:00 +0100</pubDate>
+			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzDuplicate.png" length="1599" type="image/png" />
+			<guid>plugins-2019-03-12-kzDuplicate</guid>
+		</item>
+
 		<item>
 			<title>Users CSV</title>
 			<link>https://bazooka07.github.io/PluXml-repo/plugins/users_csv-0_7_2.zip</link>
@@ -96,16 +106,6 @@
 			<pubDate>Thu, 10 Jan 2019 00:00:00 +0100</pubDate>
 			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSkinSelect.png" length="1940" type="image/png" />
 			<guid>plugins-2019-01-10-kzSkinSelect</guid>
-		</item>
-
-		<item>
-			<title>kzSQLimport</title>
-			<link>https://bazooka07.github.io/PluXml-repo/plugins/kzSQLimport-0_6_0.zip</link>
-			<description>Import des données depuis un serveur SQL. Cette version est limitée à l'import depuis Spip-2.0. D'autres sources seront ajoutées ultérieurement.</description>
-			<dc:creator>Jean-Pierre Pourrez</dc:creator>
-			<pubDate>Thu, 10 Jan 2019 00:00:00 +0100</pubDate>
-			<enclosure url="https://bazooka07.github.io/PluXml-repo/workdir/assets/plugins/kzSQLimport.png" length="2898" type="image/png" />
-			<guid>plugins-2019-01-10-kzSQLimport</guid>
 		</item>
 	</channel>
 </rss>
